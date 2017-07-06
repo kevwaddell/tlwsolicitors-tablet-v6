@@ -1,0 +1,54 @@
+header[role="banner"] {
+.bg-col(white);	
+.abs;
+.top(0);
+.left(0);
+.right(0);
+.h(8.2);
+z-index: 2;
+.over-hide;
+
+	a.logo {
+	.block;
+	.h(8);
+	.w(25);
+	.bg-img("tlw-logo-wide.png");
+	.bg-repeat(no-repeat);
+	background-position: left center;
+	.bg-size(contain);
+
+		&:hover, &:active, &:focus{
+		.opacity(0.5);	
+		}
+		
+	}
+	
+	.header-action-btns {
+	.block !important;
+	.pad-top(1);
+		.btn {
+		.border(@grayDk; 0.1);
+		.no-rounded;
+		.txt-col-grayDk;
+		.w(4);
+		.h(4);
+		.pad-all(0);
+		.mag-left(1);
+		}
+
+	}
+	
+	.rule {
+	.mag-top(0);
+	.mag-bot(0);	
+	}
+}
+
+html.svg {
+	header[role="banner"] {
+		
+		a.logo {
+		.bg-img("tlw-logo-wide.svg");
+		}
+	}
+}
