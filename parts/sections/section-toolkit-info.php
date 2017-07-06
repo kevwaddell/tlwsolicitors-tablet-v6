@@ -4,24 +4,23 @@ $slides = get_field($slides_choice, 'option');
 ?>
 
 <section class="toolkit-info">
-
-<?php foreach ($slides as $k => $slide) { ?>
-	<div class="rule"></div>			
-	<article class="tk-info">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1">
-					<div class="txt">
-					<h2 class="font-slab-serif"><?php echo $slide['slide_title']; ?></h2>
-					<?php echo $slide['slide_text']; ?>
+				<?php foreach ($slides as $k => $slide) { ?>
+					<div class="rule"></div>			
+					<div class="tk-info-wrap">
+						<div class="tk-info-txt">
+							<h2 class="font-slab-serif"><?php echo $slide['slide_title']; ?></h2>
+							<?php echo $slide['slide_text']; ?>
+						</div>
+						<figure class="tk-img" style="background-image: url(<?php echo $slide['slide_img']; ?>)"></figure>
 					</div>
-					<figure class="tk-img" style="background-image: url(<?php echo $slide['slide_img']; ?>)"></figure>
+				
+				<?php } ?>	
 				</div>
 			</div>
-		</div>
-	</article>
-<?php } ?>	
-	
+		</div>	
 </section>
 
 

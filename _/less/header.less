@@ -1,23 +1,24 @@
 header[role="banner"] {
-.bg-col(white);	
+//.bg-col(white);	
+.trans-bg(@wht; 0.9);
 .abs;
 .top(0);
 .left(0);
 .right(0);
-.h(8.2);
+.h(8);
 z-index: 2;
 .over-hide;
 
 	a.logo {
 	.block;
-	.h(8);
-	.w(25);
+	.h(7.5);
+	.w(22);
 	.bg-img("tlw-logo-wide.png");
 	.bg-repeat(no-repeat);
 	background-position: left center;
 	.bg-size(contain);
 
-		&:hover, &:active, &:focus{
+		&:active {
 		.opacity(0.5);	
 		}
 		
@@ -25,22 +26,33 @@ z-index: 2;
 	
 	.header-action-btns {
 	.block !important;
-	.pad-top(1);
+	.pad-top(1.75);
+	.h(7.5);
 		.btn {
 		.border(@grayDk; 0.1);
 		.no-rounded;
 		.txt-col-grayDk;
+		.bg-col(@trans); 
 		.w(4);
 		.h(4);
 		.pad-all(0);
 		.mag-left(1);
+			&:active {
+			.bg-col-grayDk;
+			.col(white);
+			}	
 		}
 
 	}
 	
-	.rule {
-	.mag-top(0);
-	.mag-bot(0);	
+	.tel-num {
+	.line-h(7.5);	
+		a {
+		.txt-col-red;
+			&:active {
+			.txt-col-red-dk;
+			}	
+		}
 	}
 }
 

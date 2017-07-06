@@ -28,6 +28,18 @@
 	getUrlVars();
 
 	$(document).ready(function (){
+		
+	 $('.main-txt > p,h1,h2,h3,h4,h5,h6').widowFix({
+		 letterLimit: 10
+	 });
+	 
+	  $('.services-nav-link > span.title span').widowFix({
+			 letterLimit: 10
+	  });
+	  
+	   $('.credit > a span.description').widowFix({
+			 letterLimit: 10
+	  });
 	
 	 $(".selectpicker").selectpicker({
       style: 'btn-default btn-lg hp-select',
@@ -168,7 +180,7 @@
 	});
 	
     
-      /* POST CONTINUE READING BUTTONS
+    /* POST CONTINUE READING BUTTONS
 	   Functions for the read more button which reveals more
 	   content it also has a close function as well. 
     */
@@ -250,6 +262,54 @@
 			return false;
 			
 		});
+	    
+	    /* FAQ's BUTTON ACTIONS
+		This function controls the FAQ's answers button
+		which shows and hides the answer to the question
+	    */
+	    
+	     $('body').on(event_type,'.faq-nav > button', function(){  
+		     
+		    var faq_id = $(this).data().src;
+		    var prev_id;
+		    var next_id;
+		    
+		    $('.faq-item.active').animate({top: '100%', opacity: 0}, 300, function(){
+				$(this).removeClass('active');    
+		    });
+		    
+		    $('#'+faq_id).animate({top: '0%', opacity: 1}, 300, function(){
+				$('#'+faq_id).addClass('active');     
+		    });
+		    
+		    if ($('#'+faq_id).prev().length === 1) {
+			prev_id = $('#'+faq_id).prev().attr('id');
+		    } else {
+			prev_id = $('.faq-item').last().attr('id');   
+		    }
+		    
+		    if ($('#'+faq_id).next().length === 1) {
+			next_id = $('#'+faq_id).next().attr('id');
+		    } else {
+			next_id = $('.faq-item').first().attr('id');    
+		    }
+		    
+		    $('button#prev-faq').attr('data-src', prev_id); 
+		    $('button#prev-faq').data('src', prev_id); 
+		    $('button#next-faq').attr('data-src', next_id); 
+			$('button#next-faq').data('src', next_id); 
+		    
+			/*
+			console.log($('#'+faq_id).prev().length);
+		    console.log(prev_id); 
+		    console.log($('#'+faq_id).next().length);
+		    console.log(next_id); 
+			*/
+			
+			return false;
+			
+		});
+		/* END FAQ's BUTTON ACTIONS
 		
 		/* Law Awards Pop up Function
 	   This function controls the Xmas pop up box

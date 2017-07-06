@@ -2,6 +2,7 @@
 
 <?php
 $jobs_pg = get_page_by_title( "Vacancies" );
+$content = apply_filters( 'the_content', $jobs_pg->post_content );
 ?>
 
 <?php get_template_part( 'parts/global/page', 'breadcrumbs' ); ?>

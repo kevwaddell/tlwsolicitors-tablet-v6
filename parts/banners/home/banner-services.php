@@ -3,9 +3,11 @@
 $hp_banner_quick_links = get_field('hp_banner_quick_links', 'option');	
 $links_total = count($hp_banner_quick_links);
 ?>
-<section id="top-banner">
+<section id="top-banner" class="hp-banner">
 	<div class="container-fluid">
-	<ul class="text-center list-unstyled clearfix banner-links-imgs links-total-<?php echo $links_total; ?>">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<ul class="text-center list-unstyled clearfix banner-links-imgs links-total-<?php echo $links_total; ?>">
 	<?php foreach ($hp_banner_quick_links as $bl) { 
 	$thumb_id = get_post_thumbnail_id($bl['link_page']);
 	$bg_full_src = wp_get_attachment_image_src($thumb_id, 'full' );
@@ -19,5 +21,7 @@ $links_total = count($hp_banner_quick_links);
 		</li>
 	<?php } ?>
 	</ul>
+			</div>
+		</div>
 	</div>
 </section>

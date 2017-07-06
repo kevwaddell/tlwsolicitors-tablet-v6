@@ -219,6 +219,28 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/_\/css\/img\/feefo-stars.png": {
+		"ft": 32768,
+		"iS": 3881,
+		"oA": 0,
+		"oAP": "\/_\/css\/img\/feefo-stars.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_\/css\/img\/feefo_logo.png": {
+		"ft": 32768,
+		"iS": 11184,
+		"oA": 0,
+		"oAP": "\/_\/css\/img\/feefo_logo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/_\/css\/img\/holly-bl.png": {
 		"ft": 32768,
 		"iS": 18354,
@@ -1246,6 +1268,12 @@
 		"oAP": "\/page-templates\/contact-us-page.php",
 		"oF": 0
 		},
+	"\/page-templates\/downloads-page.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/page-templates\/downloads-page.php",
+		"oF": 0
+		},
 	"\/page-templates\/general-service-page.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -1310,6 +1338,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/page-templates\/user-page.php",
+		"oF": 0
+		},
+	"\/page-templates\/videos-page.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/page-templates\/videos-page.php",
 		"oF": 0
 		},
 	"\/page.php": {

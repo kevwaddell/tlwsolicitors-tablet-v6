@@ -9,49 +9,44 @@ if (!empty($exclude_quotes)) {
 $feedback_args['exclude'] = $exclude_quotes;
 }
 $feedback_quotes = get_posts($feedback_args); 
+$section_title = "Client Feedback";	
 			
 if ($feedback_quotes) { ?>
 
 <!-- TEAM PROFILES SECTION -->
 <section id="feedback-section" class="pg-section feedback-list">
-<a name="feedback" id="feedback" class="section-target"></a>
-	
-		<?php foreach ($feedback_quotes as $k => $fb) { 
-		
-		$name = get_field('client_name', $fb->ID);	
-		$location = get_field('location', $fb->ID);	
-		$quote = get_field('quote', $fb->ID);
-		$gender = get_field('gender', $fb->ID);
-		$company = get_field('company', $fb->ID);
-		if (!empty($company)) {
-		$location = $company.', '.$location;	
-		}
-		?>
-		
-		<div class="item bg-col-<?php echo $colors[$k]; ?>">
-		
-			<div class="container-fluid feedback-quote">
-				<div class="row">
-					<div class="col-xs-2 text-left">
-						<i class="fa fa-quote-left quote-icon"></i>
-					</div>
-					<div class="col-xs-8">
-						<span class="gender-icon fa fa-<?php echo ($gender == 'm') ? 'male':'female'; ?>"></span>
-						<blockquote class="no-border text-center"><?php echo $quote ; ?></blockquote>
-						<span class="quote-name"><?php echo $name ; ?>, <?php echo $location ; ?></span>
-					</div>
-					<div class="col-xs-2 text-right">
-						<i class="fa fa-quote-right quote-icon"></i>
-					</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<h2 class="section-header"><?php echo $section_title; ?></h2>	
+				<div class="lg-intro">
+					<?php the_content(); ?>
 				</div>
-			</div>
-			
-			<div class="overlay"></div>
+				<div class="rule"></div>
 		
-		</div>
-
-		<?php } ?>		
-
+				<?php foreach ($feedback_quotes as $k => $fb) { 
+				$name = get_field('client_name', $fb->ID);	
+				$location = get_field('location', $fb->ID);	
+				$quote = get_field('quote', $fb->ID);
+				$gender = get_field('gender', $fb->ID);
+				$company = get_field('company', $fb->ID);
+				if (!empty($company)) {
+				$location = $company.', '.$location;	
+				}
+				?>
+		
+				<div id="quote-id-<?php echo $k; ?>" class="feedback-quote">
+					<blockquote class="no-border"><?php echo $quote; ?></blockquote>
+					<span class="quote-name"><?php echo $name; ?>, <?php echo $location; ?></span>
+				</div>
+				<?php if ($k+1 < count($feedback_quotes)) { ?>
+				<div class="rule"></div>
+				<?php } ?>
+				
+				<?php } ?>	
+			</div>
+		</div>	
+	</div>
 </section>
 <!-- TEAM PROFILES SECTION -->
 

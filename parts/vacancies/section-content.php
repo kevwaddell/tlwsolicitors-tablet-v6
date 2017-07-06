@@ -20,12 +20,14 @@ $job_display_to_date = get_field( 'job_display_to_date');
 ?>
 <article <?php post_class("content-section"); ?>>	
 	
+	<?php get_template_part( 'parts/global/page', 'breadcrumbs' ); ?>
+	
 	<div class="container-fluid">
 			
 		<div class="row">
 			
 			<div class="col-md-10 col-md-offset-1">
-			<div class="entry wide-entry">
+			<div class="entry">
 				
 				<div class="main-txt">
 					
@@ -49,8 +51,8 @@ $job_display_to_date = get_field( 'job_display_to_date');
 					<?php echo $content_main;  ?>
 					<div id="content-extra" class="closed">
 						<div id="content-extra-inner">
-							<?php echo $content_extended;  ?>
 							<button id="close-content-extra-btn" class="btn btn-default"><i class="fa fa-times-circle"></i><span class="sr-only">Close</span></button>
+							<?php echo $content_extended;  ?>
 						</div>
 					</div>
 					
@@ -58,17 +60,14 @@ $job_display_to_date = get_field( 'job_display_to_date');
 					<?php the_content(); ?>
 					<?php } ?>
 				</div>
-															
+				
+				<?php if (!empty($post_content['extended'])) { ?>
+				<button id="continue-read-btn" class="btn btn-default btn-block font-slab-serif caps"><?php echo $more_btn_text; ?><i class="fa fa-plus"></i></button>
+				<?php } ?>
+											
 			</div>
 			</div>
 		
-		</div>
-		<div class="row">
-			<div class="col-xs-12">
-			<?php if (!empty($post_content['extended'])) { ?>
-			<button id="continue-read-btn" class="btn btn-default btn-block"><?php echo $more_btn_text; ?><i class="fa fa-plus-circle"></i></button>
-			<?php } ?>
-			</div>
 		</div>
 	</div>
 	

@@ -72,19 +72,24 @@ max-width: 100% !important;
 }
 
 #form-section {
+	
+	.gform_wrapper .gform_heading {
+	.mag-bot(0);	
+	}
+	
 	.gform_description {
 	.txt-col-gray;	
 	.pad-top(0);
 	.bold;
 	.font-size(1.6);
-	.mag-bot(1);
+	.mag-bot(0);
 	}
 	
 	.gform_wrapper input[type="text"],
 	.gform_wrapper input[type="email"],
 	.gform_wrapper input[type="tel"],
 	.gform_wrapper input[type="file"] {
-	.h(6);	
+	.h(4);	
 	.font-size(2) !important;
 	.pad-all(1);
 	.border-col(@grayDk);
@@ -106,7 +111,7 @@ max-width: 100% !important;
 	}
 	
 	.gform_wrapper select {
-	.h(6);	
+	.h(4);	
 	}
 	
 	.bootstrap-select.btn-group .dropdown-menu li.selected a {
@@ -126,21 +131,22 @@ max-width: 100% !important;
 	
 	.gform_wrapper textarea.large {
 		//.h(18.7);
-		.h(29);
+		.h(21.8);
 		.pad-all(2);
 		.font-size(2);
 		.border-col(@grayDk);
 	}
 	
 	.bootstrap-select button {
-	.h(6);	
-	.font-size(2);
+	.h(4);	
+	.line-h(1.8);
+	.font-size(1.6);
 	.pad-all(1);
 	.border-col(@grayDk);
 	}
 	
 	.gform_wrapper label {
-	.font-size(2);	
+	.font-size(1.6);	
 	}
 	
 	.captcha label {
@@ -185,7 +191,7 @@ max-width: 100% !important;
 	}
 	
 	.gform_wrapper .gform_footer {
-	.mag-top(3);
+	.mag-top(1);
 	.pad-all(0);
 	.rel;
 	//width: 50%;
@@ -197,9 +203,9 @@ max-width: 100% !important;
 		.no-rounded;
 		.bg-col-red-dk;
 		.txt-col-wht;
-		.h(6);
-		.font-size(2.6);
-		.line-h(2.6);
+		.h(4);
+		.font-size(1.6);
+		.line-h(1.6);
 		.caps;
 		width: 100%;
 		.font-slab-serif;
@@ -211,17 +217,17 @@ max-width: 100% !important;
 			.pad-right(2);
 			.block;
 			.txt-col-wht;	
-			.font-size(3);
+			.font-size(2);
 			height: 100%;
 			font-style: normal;
 				&:after {
 				font-family: FontAwesome;
 				content: "\f105";	
-				.line-h(6);
+				.line-h(4);
 				}
 			}
 			
-			&:hover, &:active, &:focus {
+			&:active {
 			.bg-col-red;
 			}
 		}
@@ -237,7 +243,7 @@ max-width: 100% !important;
 		.font-slab-serif;
 		.caps;
 		.mag-bot(2);
-			&:hover, &:active, &:focus {
+			&:active {
 			.bg-col-red-dk;
 			}
 		}
@@ -252,9 +258,9 @@ max-width: 100% !important;
 		.no-rounded;
 		.bg-col-red-dk;
 		.txt-col-wht;
-		.h(6);
-		.font-size(2.6);
-		.line-h(2.6);
+		.h(4);
+		.font-size(1.6);
+		.line-h(1.6);
 		.caps;
 		width: 100%;
 		.font-slab-serif;
@@ -266,17 +272,17 @@ max-width: 100% !important;
 			.pad-right(2);
 			.block;
 			.txt-col-wht;	
-			.font-size(3);
+			.font-size(2);
 			height: 100%;
 			font-style: normal;
 				&:after {
 				font-family: FontAwesome;
 				content: "\f105";	
-				.line-h(6);
+				.line-h(4);
 				}
 			}
 			
-			&:hover, &:active, &:focus {
+			&:active {
 			.bg-col-red;
 			}
 		}
@@ -308,7 +314,12 @@ max-width: 100% !important;
 	}
 	
 	.form-disclaimer {
-	.mag-top(6);
+	.mag-top(5);
+	.font-size(1.2);
+	.line-h(1.4);
+		br {
+		.none;	
+		}
 	}
 	
 	h2.gsection_title {
@@ -332,10 +343,10 @@ max-width: 100% !important;
 		.no-rounded;
 		.bg-col-red-dk;
 		.txt-col-wht;
-		.h(6);
+		.h(4);
 		.pad-all(0);
-		.line-h(6);
-		.font-size(2.6);
+		.line-h(4);
+		.font-size(1.6);
 		.caps;
 		width: 100%;
 		.font-slab-serif;
@@ -347,17 +358,17 @@ max-width: 100% !important;
 			.pad-right(2);
 			.block;
 			.txt-col-wht;	
-			.font-size(3);
+			.font-size(2);
 			height: 100%;
 			font-style: normal;
 				&:after {
 				font-family: FontAwesome;
 				content: "\f105";	
-				.line-h(6);
+				.line-h(4);
 				}
 			}
 			
-			&:hover, &:active, &:focus {
+			&:active {
 			.bg-col-red;
 			}
 		}
@@ -429,12 +440,14 @@ max-width: 100% !important;
 }
 
 #hp-form {
-.mag-bot(4);	
+.mag-top(3);
+.mag-bot(3);	
 }
 
 #hp-form .gform_wrapper {
 overflow: hidden;
-
+.border(@grayDk; 0.1);
+.pad-all(2);
 	.gform_heading {
 	.text-center;
 		span.gform_description {
@@ -480,8 +493,8 @@ overflow: hidden;
 		input[type="email"],
 		input[type="tel"],
 		input[type="file"] {
-		.h(6);	
-		.font-size(2) !important;
+		.h(4);	
+		.font-size(1.6) !important;
 		.pad-all(1);
 		.bg-col(@wht);
 		.shadow-inset-none;
@@ -500,7 +513,7 @@ overflow: hidden;
 		
 		button {
 		.no-border;
-		.h(6);
+		.h(4);
 		.pad-all(0);
 		width: 100%;
 		.bg-col-red;
@@ -513,14 +526,15 @@ overflow: hidden;
 			.abs;
 			.right(2);
 			.top(0);
-			.h(6);
+			.h(4);
+			.line-h(4);
 			font-style: normal;
 			font-family: FontAwesome;
 			content: "\f105";	
 			.txt-col-wht;
-			.font-size(4);
+			.font-size(2);
 			}
-			&:hover, &:active, &:focus {
+			&:active {
 			.bg-col-red;
 			}
 		}	

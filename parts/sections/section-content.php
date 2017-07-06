@@ -1,6 +1,7 @@
 <?php  
-global $hide_title;
 global $post;
+global $children;
+global $banner_type;	
 $post_content = get_extended( $post->post_content );
 $content_main = apply_filters('the_content', $post_content['main'] );
 $content_extended = apply_filters('the_content', $post_content['extended'] );
@@ -19,7 +20,7 @@ $more_btn_text = "Continue Reading";
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
 				
-				<?php if ($post->post_parent != 0 ) { ?>
+				<?php if ($post->post_parent != 0 && $banner_type != 'video') { ?>
 				<div class="service-label font-slab-serif caps txt-col-gray"><?php the_title(); ?></div>		
 				<?php } ?>
 
@@ -30,8 +31,8 @@ $more_btn_text = "Continue Reading";
 						<?php echo $content_main;  ?>
 						<div id="content-extra" class="closed">
 							<div id="content-extra-inner">
-								<?php echo $content_extended;  ?>
 								<button id="close-content-extra-btn" class="btn btn-default"><i class="fa fa-times-circle"></i><span class="sr-only">Close</span></button>
+								<?php echo $content_extended;  ?>
 							</div>
 						</div>
 						
@@ -43,7 +44,7 @@ $more_btn_text = "Continue Reading";
 				</div>
 
 		<?php if (!empty($post_content['extended'])) { ?>
-		<button id="continue-read-btn" class="btn btn-default btn-block"><?php echo $more_btn_text; ?><i class="fa fa-plus"></i></button>
+		<button id="continue-read-btn" class="btn btn-default btn-block font-slab-serif caps"><?php echo $more_btn_text; ?><i class="fa fa-plus"></i></button>
 		<?php } ?>
 						
 		<?php if (!empty($children)) { ?>

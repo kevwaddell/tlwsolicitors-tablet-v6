@@ -8,7 +8,7 @@ $banner_title_active = get_field('banner_title_active');
 	<div class="container">
 
 		<div class="row">			
-			<div class="col-xs-10 col-xs-offset-1">
+			<div class="col-md-10 col-md-offset-1">
 				<?php foreach ($banner_parts as $bp) { ?>
 				<?php if ($bp['acf_fc_layout'] == "banner-video") { 
 				$video_mp4 = $bp['video_mp4'];	

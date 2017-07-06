@@ -14,3 +14,4 @@
 		</div>
 	</div>
 </section>
+<div class="rule"></div>
