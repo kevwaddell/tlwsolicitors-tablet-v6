@@ -65,8 +65,8 @@ $section_title = "Article text";
 					<?php echo $content_main;  ?>
 					<div id="content-extra" class="closed">
 						<div id="content-extra-inner">
-							<?php echo $content_extended;  ?>
 							<button id="close-content-extra-btn" class="btn btn-default"><i class="fa fa-times-circle"></i><span class="sr-only">Close</span></button>
+							<?php echo $content_extended;  ?>
 						</div>
 					</div>
 					

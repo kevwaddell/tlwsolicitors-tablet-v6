@@ -17,11 +17,6 @@ $map_active = $section['map_active'];
 	
 	//echo $map_marker;
 ?>
-<style>
-	li.office-location-link {
-	display: none !important;	
-	}
-</style>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWfwM9bo9zsSfrpXwMZ0bDZbhvgiP1tKo"></script>
 <script>
 var TLW_MAP_ID = 'TLW_style';
@@ -65,21 +60,30 @@ google.maps.event.addDomListener(window, 'load', wide_map_init);
 	
 </script>
 <a name="find-us" id="find-us" class="section-target"></a>
+<div class="rule"></div>
 <section id="wide-map" class="pg-section">
-	<h2 class="section-header"><?php echo $section_title; ?></h2>
-	
-	<div id="wide-map-canvas" style="height: 440px; width: 100%;"></div>
-
-	<div class="location-box">
-		<address>
-			<span class="company bold caps col-red font-size-25"><?php bloginfo('name'); ?></span><br>
-			<?php echo $address; ?>
-		</address>
+	<div class="container-fluid">
+		<div class="row"><div class="col-md-10 col-md-offset-1">
 		
-		<button class="btn btn-block" data-toggle="modal" data-target="#route-finder-modal"><i class="fa fa-car"></i> Route finder</button>
-						
+		<h2 class="section-header"><?php echo $section_title; ?></h2>
+		<div class="row">
+			<div class="col-xs-7 col-md-8">
+				<div id="wide-map-canvas"></div>
+			</div>
+			<div class="col-xs-5 col-md-4">
+				<div class="location-box">
+					<address>
+						<span class="company bold caps col-red font-size-25"><?php bloginfo('name'); ?></span><br>
+						<?php echo $address; ?>
+					</address>
+					
+					<button id="route-finder-btn" class="btn btn-block"><i class="fa fa-car"></i> Route finder</button>
+									
+				</div>
+			</div>
+		
+		</div></div>
 	</div>
-
 </section>
 
 <?php } ?>

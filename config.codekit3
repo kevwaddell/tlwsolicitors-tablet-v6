@@ -1382,10 +1382,10 @@
 		"oAP": "\/parts\/banners\/home\/banner-services.php",
 		"oF": 0
 		},
-	"\/parts\/blog\/archive-dropdown.php": {
+	"\/parts\/blog\/archive-dropdowns.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/parts\/blog\/archive-dropdown.php",
+		"oAP": "\/parts\/blog\/archive-dropdowns.php",
 		"oF": 0
 		},
 	"\/parts\/blog\/banner-single.php": {
@@ -1400,10 +1400,10 @@
 		"oAP": "\/parts\/blog\/category-dropdown.php",
 		"oF": 0
 		},
-	"\/parts\/blog\/index-dropdowns.php": {
+	"\/parts\/blog\/date-dropdown.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/parts\/blog\/index-dropdowns.php",
+		"oAP": "\/parts\/blog\/date-dropdown.php",
 		"oF": 0
 		},
 	"\/parts\/blog\/posts-list.php": {
@@ -1620,6 +1620,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/parts\/sections\/section-blog.php",
+		"oF": 0
+		},
+	"\/parts\/sections\/section-child-links.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/parts\/sections\/section-child-links.php",
 		"oF": 0
 		},
 	"\/parts\/sections\/section-content.php": {

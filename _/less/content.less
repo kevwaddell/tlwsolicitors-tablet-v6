@@ -126,6 +126,10 @@ article.tlw_landing_page {
 		.border(@grayDk; 0.1);
 		.no-rounded;
 		.mag-top(5);
+			
+			&:last-child {
+			.mag-bot(0);	
+			}
 		
 			span.label {
 			.in-block;
@@ -215,6 +219,20 @@ article.tlw_landing_page {
 			.mag-right(1);
 			}
 			
+			&.cols-2, &.cols-3 {
+			.columns(50%, 2, 30px, @trans, none, 0px);
+			}
+			
+			&:last-child {
+			.mag-bot(0);	
+			}
+			
+			@media screen and (orientation: landscape) {
+				&.cols-3 {
+				.columns(30%, 3, 30px, @trans, none, 0px);
+				}
+			}
+			
 		}
 		
 		//Ordered list
@@ -271,9 +289,10 @@ article.tlw_landing_page {
 		#content-extra-inner {	
 		.rel;
 		
-			p:last-child {
+			p:last-child, ul:last-child {
 			.pad-right(7);	
 			}
+			
 		}
 	}
 	

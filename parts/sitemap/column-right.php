@@ -58,10 +58,10 @@ $subjects = get_tags($subjects_args);
 //echo '<pre>';print_r($topics);echo '</pre>';
 
  ?>
-<div class="col-xs-6 col-md-5">
+<div class="col-xs-6">
 	<?php if ($services_for_biz) { ?>
 	
-	<h3><a href="<?php echo get_permalink($for_biz_pg); ?>"><?php echo ($for_biz_page_icon) ? '<i class="icon fa '.$for_biz_page_icon.' f-lg"></i>': ''; ?><?php echo get_the_title($for_biz_pg); ?><i class="fa fa-angle-right fa-lg"></i></a></h3>
+	<a href="<?php echo get_permalink($for_biz_pg); ?>" class="header-link"></a>
 	
 
 	<?php foreach ($services_for_biz as $service) { ?>
@@ -85,7 +85,7 @@ $subjects = get_tags($subjects_args);
 	 ?>
 	
 		<div class="list-block">
-			<h4><a href="<?php echo get_permalink($service->ID); ?>"><?php echo ($icon_tag) ? $icon_tag: ''; ?><?php echo $service->post_title; ?><i class="fa fa-angle-right fa-lg"></i></a></h4>
+			<a href="<?php echo get_permalink($service->ID); ?>" class="header-link"><?php echo $service->post_title; ?></a></h4>
 			
 		<?php if ($service_children) { ?>
 			<ul class="list-unstyled">
@@ -119,7 +119,7 @@ $subjects = get_tags($subjects_args);
 	
 	<?php } ?>
 	
-	<h3><a href="<?php echo get_permalink($company_page->ID); ?>"><?php echo ($company_page_icon) ? '<i class="icon fa '.$company_page_icon.' f-lg"></i>': ''; ?><?php echo $company_page->post_title; ?><i class="fa fa-angle-right fa-lg"></i></a></h3>
+	<a href="<?php echo get_permalink($company_page->ID); ?>" class="header-link"><?php echo $company_page->post_title; ?></a>
 	
 	<?php if ($company_pages) { ?>
 		<div class="list-block">
@@ -135,7 +135,7 @@ $subjects = get_tags($subjects_args);
 		</div>
 	<?php } ?>
 						
-	<h3><i class="icon fa fa-check fa-lg"></i>General</h3>
+	<h3>General</h3>
 	
 	<?php if ($rescources_pages) { ?>
 		<div class="list-block">
@@ -151,7 +151,7 @@ $subjects = get_tags($subjects_args);
 		</div>
 	<?php } ?>
 	
-	<h3><a href="<?php echo get_permalink($legal_page->ID); ?>"><?php echo ($legal_page_icon) ? '<i class="icon fa '.$legal_page_icon.' f-lg"></i>': ''; ?><?php echo $legal_page->post_title; ?><i class="fa fa-angle-right fa-lg"></i></a></h3>
+	<a href="<?php echo get_permalink($legal_page->ID); ?>" class="header-link"><?php echo $legal_page->post_title; ?></a>
 	
 	<?php if ($legal_pages) { ?>
 		<div class="list-block">
@@ -169,7 +169,7 @@ $subjects = get_tags($subjects_args);
 	<?php } ?>
 	
 	<?php if ($topics) { ?>
-		<h3><a href="<?php echo get_permalink($news_page->ID); ?>"><?php echo ($news_page_icon) ? '<i class="icon fa '.$news_page_icon.' f-lg"></i>': ''; ?><?php echo $news_page->post_title; ?>: Categories<i class="fa fa-angle-right fa-lg"></i></a></h3>
+		<a href="<?php echo get_permalink($news_page->ID); ?>" class="header-link"><?php echo $news_page->post_title; ?>: Categories</a>
 		
 		<div class="list-block">
 			<ul class="list-unstyled">
@@ -184,7 +184,7 @@ $subjects = get_tags($subjects_args);
 	<?php } ?>
 	
 	<?php if ($subjects) { ?>
-		<h3><?php echo ($news_page_icon) ? '<i class="icon fa '.$news_page_icon.' f-lg"></i>': ''; ?><?php echo $news_page->post_title; ?><i class="fa fa-angle-right fa-lg"></i>: Tags</h3>
+		<h3><?php echo $news_page->post_title; ?>: Tags</h3>
 		
 		<div class="list-block" style="text-transform: capitalize;">
 			<?php wp_tag_cloud('smallest=14&largest=14&unit=px&separator= | '); ?>

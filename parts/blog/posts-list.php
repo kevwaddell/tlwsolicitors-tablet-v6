@@ -47,7 +47,7 @@
 					</a>
 				</article>
 				</div>
-			<?php if ( ($post_counter % 3 == 0) && ($post_counter < $posts_per_page)) { ?>
+			<?php if ( ($post_counter % 2 == 0) && ($post_counter < $posts_per_page)) { ?>
 			</div>
 			<div class="row">		
 			<?php } ?>

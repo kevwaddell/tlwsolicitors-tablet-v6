@@ -1,3 +1,4 @@
+<?php if (!is_search()) { ?>
 <div id="search-pop-up" class="off">
 	<div class="search-pop-up-inner-wrap">
 		<div class="search-pop-up-inner">
@@ -7,4 +8,5 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div>		
+<?php } ?>

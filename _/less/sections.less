@@ -1,6 +1,4 @@
 //BANNER SECTION
-section#post-top-banner {}
-
 section#slim-top-banner {
 .h(25);
 //.mag-top(3);
@@ -8,13 +6,15 @@ section#slim-top-banner {
 .over-hide;
 	
 	.banner-title {
-	.rel;
+	.abs;
+	.left(0);
+	.bottom(0);
 	z-index: 2;
 	.in-block;
-	.pad(0;2;1;0);	
+	.pad(1;2;0.1;0);	
 	.bg-col(@wht);
-	.font-size(2);
-	.line-h(2);
+	.font-size(1.8);
+	.line-h(1.8);
 	.txt-col-gray;
 	//.mag-top(-2.25);
 	}
@@ -83,7 +83,7 @@ section#top-banner {
 	.mag-bot(0);
 		li {
 		width: calc(~"100% / 3");
-		.h(25);
+		.h(20);
 		.mag-bot(0.4);
 		.pad-left(0.2);
 		.pad-right(0.2);
@@ -163,22 +163,10 @@ section#top-banner {
 }
 
 section#contact-us-banner {
-	
-	.container {
+.mag-bot(4);		
+	.container-fluid {
 	height: 100%;	
 	.rel;
-	}
-	
-	.banner-title {
-	.rel;
-	z-index: 2;
-	.in-block;
-	.pad(1;2;1;2);	
-	.bg-col(@wht);
-	.font-size(2.5);
-	.line-h(2.5);
-	.txt-col-gray;
-	.mag-top(-2.25);
 	}
 	
 	.img {
@@ -198,52 +186,47 @@ section#contact-us-banner {
 	.txt-col-wht;
 	.mag-bot(8);
 	.pad-top(8);
+	.pad-left(2.5);
 	
 			p {
-			.font-size(3.5);
-			.line-h(4);	
+			.font-size(2);
+			.line-h(2.5);	
 			}
 			
 			p.header {
 			.font-slab-serif;
-			.font-size(6);
-			.line-h(6);
+			.font-size(4);
+			.line-h(4);
 			.caps;
-			.mag-bot(2);	
+			.mag-bot(1);	
 			}	
 	}
 	
 	.contact-info {
 	.rel;
 	z-index: 2;
-	.pad-bot(4);
-		.contact-info-label, a.contact-info-link {
+	.pad-bot(3);
+	.pad-left(1);
+	.pad-right(1);
+	text-align: center;
+		a.contact-info-link {
 		.txt-col-grayDk;
 		text-align: center;	
-		.font-size(3);
+		.font-size(1.6);
 		.font-slab-serif;
-		.h(7);
-		.line-h(7);
+		.h(5);
+		.line-h(5);
 		.rel;
-		.mag-bot(2);
-		.pad-left(6);
+		.pad-right(1);
+		.pad-left(1);
 		.trans-bg(@wht; 0.8);
 		.border(@grayDk; 0.1);
-		
-			i {
-			.abs;
-			.top(0);
-			.left(0);
-			.w(7);
-			.h(7);
-			.line-h(7);
-			.font-size(3);
-			}
-		}	
-		
-		a.contact-info-link {
-		.block;	
-		.no-text-dec;
+		.in-block;
+		.mag-left(0.5);
+		.mag-right(0.5);
+		width: 31%;
+		.no-text-dec;		
+			
 			&:active {
 			.bg-col-grayDk;
 			.txt-col-wht;
@@ -354,6 +337,40 @@ section#contact-us-banner {
 	}	
 }
 
+.child-page-links {
+
+	a.btn {
+	.font-slab-serif;
+	.caps;
+	.no-rounded;
+	.font-size(1.6);	
+	.pad(0;6;0;2);
+	.line-h(3.8);
+	.h(4);
+	.bg-col(@wht);
+	.txt-col-grayDk;
+	.border(@grayDk; 0.1);
+	.rel;
+	.mag-right(1);
+	.mag-bot(1);
+		&:after {
+		content: "\f105";	
+		font-family: FontAwesome;	
+		.abs;
+		.right(0);
+		.top(0);
+		.line-h(3.8);
+		.h(3.8);
+		.pad-right(2);	
+		}
+		
+		&:active {
+		.bg-col-grayDk;
+		.txt-col-wht;
+		}
+	}
+}
+
 // GENERAL PAGE SECTION STYLES
 .pg-section {
 	h2.section-header {
@@ -361,7 +378,7 @@ section#contact-us-banner {
 	.txt-col-red;
 	.font-size(3);
 	.line-h(3.5);	
-	.mag-bot(1);
+	.mag-bot(2);
 	}	
 	
 	.lg-intro {
@@ -780,57 +797,206 @@ section#contact-us-banner {
 	}
 } 
 
-// LOCATION MAP SECTION
-#wide-map {}
-
-#route-finder-modal {}
-
-//GLOBAL FREEPHONE TELEPHONE NUMBER STYLE
-#global-tel-num {
-.rel;	
-	.container-fluid {
-	.rel;	
-	}
-	
-	i {
-	.abs;
-	.top(0);
-	.w(10);
-	.line-h(10);
-	.font-size(6);
-	.txt-col-gray;	
-	.animated;
-		&.fa-whatsapp {
-		.left(1.5);
-		.bounceInLeft;	
-		}
+//BLOG POSTS SECTION
+#blog-posts {
+	.posts-grid {
 		
-		&.fa-comments {
-		.right(1.5);
-		.bounceInRight;	
-		.text-right;
-		}
-	}
-	
-	.number {
-	.font-size(4.5);
-	.line-h(10);	
-	.col(@grayDk);
-	.pad(0;5;0;5);	
 		a {
-		.txt-col-orange;	
-		.bold;
+		.block;
+		.h(20);
+		.rel;
 		.no-text-dec;
-			&:active {
-			.txt-col-red;
+		.over-hide;
+			
+			span.link-bg-img {
+			.abs;
+			.top(0);
+			.left(0);
+			.right(0);
+			.bottom(0);
+			.bg-size;
+			.bg-repeat(no-repeat);
+			background-position: center center;	
+			.transition;	
+			}	
+				
+			span.title {
+			.abs;
+			.top(0);
+			.left(0);
+			.right(0);
+			.bottom(0);	
+			.trans-bg(@wht; 0.8);
+			.pad(0;2;0;2);
+			.txt-col-grayDk;
+			.transition;
+			.text-center;
+			.line-h(20);
+			.font-size(2.5);
+			.font-slab-serif;
+				span {
+				.in-block;
+				vertical-align: middle;
+				.line-h(2.5);	
+				}	
 			}
+			
+			&:hover, &:active, &:focus {
+				span.link-bg-img {
+				.top(-2);
+				.left(-2);
+				.right(-2);
+				.bottom(-2);
+				-webkit-filter: blur(5px);
+				-moz-filter: blur(5px);
+				-o-filter: blur(5px);
+				-ms-filter: blur(5px);
+				filter: blur(5px);	
+				}
+				
+				span.title {
+				.trans-bg(@red; 0.8);
+				.txt-col-wht;	
+				}
+			}
+
 		}
 		
-		@media screen and (orientation: landscape) {
-		.font-size(5);
+		.col-xs-4 {
+			a {
+			.h(16);
+				span.title {
+				.line-h(16);	
+				.font-size(2);
+					span {
+					.line-h(2);	
+					}
+				}		
+			}
 		}
 	}
 
 }
 
-html.svg {}
+// LOCATION MAP SECTION
+#wide-map {
+	.container-fluid {
+	.rel;	
+	}
+
+	#wide-map-canvas {
+	width: 100%;
+	.h(25.2);	
+	}
+	
+	.google-maps {
+	width: 100%;	
+	}
+	
+	.location-box {
+	.border(@grayDk; 0.1);
+	
+		address {
+		.pad-all(1.5);
+		.font-size(1.6);	
+		.line-h(2);
+		.mag-bot(0);
+		.rel;
+		}
+		
+		button.btn {
+		.no-rounded;
+		.pad(0; 0; 0; 1);
+		.h(4);
+		.bg-col(@wht);
+		.txt-col-grayDk;
+		.rel;
+		.font-size(2);
+		text-align: left;
+		outline: none;
+		.caps;
+		.font-slab-serif;
+		.border-top(@grayDk; 0.1);
+		
+			i {
+			.abs;
+			.right(0);
+			.top(0);
+			.h(4);
+			.w(4);
+			.font-size(2);
+			text-align: center;
+			.line-h(4);
+			}	
+			
+			&:active {
+			.bg-col(@grayDk);
+			.txt-col-wht;
+			}
+		}
+	}
+
+}
+
+#video-viewer {
+.fixed;
+.left(0);
+.right(0);
+.bottom(0);
+.top(0);
+.trans-bg(@grayDk; 0.8);
+z-index: 11004002;
+overflow: hidden;
+
+	
+	&.viewer-open {
+	.top(0);	
+	.opacity(1);
+	}
+	
+	&.viewer-closed {
+	top: 100%;	
+	.opacity(0);
+	}
+	
+	#close-video {
+	.abs;
+	.top(2);
+	.right(2);
+	.w(4);
+	.h(4);
+	.pad-all(0);
+	.rounded(100%);
+	.no-border;
+	.trans-bg(@wht; 0.5);
+	.col(@grayDk);	
+		i {
+		.block;
+		.w(4);
+		.h(4);
+		text-align: center;
+		.line-h(4);	
+		.font-size(2);
+		}
+		&:hover, &:active, &:focus {
+		.col(@gray);
+		.bg-col(@wht);
+		}
+	}
+	
+	.video-viewer-inner {
+	.abs;
+	left: 50%;
+	top: 50%;
+	.translate(-50%, -50%);
+	.w(80);
+	.h(45);
+	.bg-col(@grayDk);
+	.drop-shadow(0,0, 40px, 0.7);
+	overflow: hidden;
+		video {
+		width: 100%;
+		height: auto;
+		}	
+	}
+}

@@ -12,6 +12,7 @@ body.atfc-tablet-css {
   margin: 0;
   overflow: hidden;
   opacity: 1;
+  font-family: sans-serif;
 }
 body.atfc-tablet-css * {
   box-sizing: border-box;
@@ -605,4 +606,68 @@ body.atfc-tablet-css #footer-info .headway-logo {
 }
 body.atfc-tablet-css #footer-info .headway-logo a {
   display: none;
+}
+.no-js body.atfc-tablet-css.loading {
+  -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -o-filter: blur(0px);
+  -ms-filter: blur(0px);
+  filter: blur(0px);
+}
+.no-js body.atfc-tablet-css .no-script-wrap {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  background-color: #4b4b4b;
+  z-index: 1000;
+}
+.no-js body.atfc-tablet-css .no-script-wrap .no-script-inner-wrap {
+  text-align: center;
+  padding: 20px;
+  height: 100%;
+}
+.no-js body.atfc-tablet-css .no-script-wrap .no-script-inner-wrap:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+}
+.no-js body.atfc-tablet-css .no-script-wrap .no-script-inner {
+  display: inline-block;
+  vertical-align: middle;
+  width: 80%;
+  max-width: 500px;
+  border: 5px solid #C60751;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  background-color: white;
+  background-image: url(/wp-content/themes/tlwsolicitors-tablet-v6/_/css/img/tlw-logo-wide.png);
+  background-repeat: no-repeat;
+  background-position: center 20px;
+  padding: 20px;
+}
+.no-js body.atfc-tablet-css .no-script-wrap .no-script-inner h3 {
+  color: #C60751;
+  margin-top: 90px;
+  text-align: center;
+}
+.no-js body.atfc-tablet-css .no-script-wrap .no-script-inner p {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.no-js body.atfc-tablet-css .no-script-wrap .no-script-inner a.btn {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  text-transform: uppercase;
+  background-color: #C60751;
+  color: white;
+}
+.no-js body.atfc-tablet-css .no-script-wrap .no-script-inner a.btn:active {
+  background-color: #7A1039;
 }

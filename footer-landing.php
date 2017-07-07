@@ -1,12 +1,12 @@
-		<?php get_template_part( 'parts/footers/footer', 'landing-page' ); ?>
+	<?php get_template_part( 'parts/footers/footer', 'landing-page' ); ?>
 		
-		</main>
+	</main>
 		
-	</div><!-- MAIN WRAPPER END -->
+</div><!-- MAIN WRAPPER END -->
 		
-	<?php get_template_part( 'parts/global/popups/no', 'script' ); ?>
+<?php get_template_part( 'parts/global/popups/no', 'script' ); ?>
 		
-	<?php wp_footer(); ?>
+<?php wp_footer(); ?>
 		
-	</body>
+</body>
 </html>

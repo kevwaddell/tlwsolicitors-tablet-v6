@@ -1,6 +1,5 @@
 <?php  
 global $post;
-global $children;
 global $banner_type;	
 $post_content = get_extended( $post->post_content );
 $content_main = apply_filters('the_content', $post_content['main'] );
@@ -46,17 +45,7 @@ $more_btn_text = "Continue Reading";
 		<?php if (!empty($post_content['extended'])) { ?>
 		<button id="continue-read-btn" class="btn btn-default btn-block font-slab-serif caps"><?php echo $more_btn_text; ?><i class="fa fa-plus"></i></button>
 		<?php } ?>
-						
-		<?php if (!empty($children)) { ?>
-		<div class="rule"></div>
-		<nav class="child-page-links text-center">
-			<?php foreach ($children as $child) { ?>
-				<a href="<?php echo get_permalink($child->ID); ?>" class="btn btn-default no-border no-rounded"><?php echo get_the_title($child->ID); ?></a>
-			<?php } ?>
-		</nav>		
-		<?php } ?>
-		
-	
+
 			</div>
 		</div>
 	</div>

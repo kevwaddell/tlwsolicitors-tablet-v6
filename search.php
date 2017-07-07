@@ -9,11 +9,17 @@ $search_query = get_search_query();
 ?>
 	
 <article class="page">
-	<h1 class="text-center" style="margin-top: 20px;">Search Results</h1>
-	<p class="intro text-center">You Searched for: "<?php the_search_query(); ?>"<br> Results: <?php echo $search_count; ?></p>
-	
-	<div class="search-form-wrap">
-	<?php get_search_form(); ?>
+	<div class="container-fluid">	
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<h1 class="text-center" style="margin-top: 20px;">Search Results</h1>
+				<p class="intro text-center">You Searched for: "<?php the_search_query(); ?>"<br> Results: <?php echo $search_count; ?></p>
+				
+				<div class="search-form-wrap">
+				<?php get_search_form(); ?>
+				</div>
+			</div>
+		</div>
 	</div>
 </article>
 
@@ -31,19 +37,38 @@ $search_query = get_search_query();
 					 ?>	
 
 					<article <?php post_class(); ?>>
+						<?php if ($post->post_type == 'post') { ?>
+						<span class="label label-default">Article</span>						
+						<?php } ?>
+						<?php if ($post->post_type == 'page') { ?>
+						<span class="label label-default">Page</span>						
+						<?php } ?>
+						<?php if ($post->post_type == 'tlw_vacancies_cpt') { ?>
+						<span class="label label-default">Vacancies</span>						
+						<?php } ?>
 						<h4><?php the_title(); ?></h4>
 						
 						<?php if ($post->post_type == 'post') { ?>
-						<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><i class="fa fa-calendar"></i> <?php echo $date; ?></time>
+						<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php echo $date; ?></time>
 						<?php } ?>
 								
 						<?php the_excerpt(); ?>	
 							
 						<a href="<?php esc_url( the_permalink() ); ?>" title="View <?php the_title_attribute(); ?> article" class="btn btn-default btn-block" rel="bookmark">
-							View <?php echo ($post->post_type == 'post') ? "Post":"Page"; ?> <i class="fa fa-arrow-circle-right fa-lg"></i>
+						View
+						<?php if ($post->post_type == 'post') { ?>
+						Article						
+						<?php } ?>
+						<?php if ($post->post_type == 'page') { ?>
+						Page					
+						<?php } ?>
+						<?php if ($post->post_type == 'tlw_vacancies_cpt') { ?>
+						Vacancies					
+						<?php } ?>
 						</a>
 						
 					</article>
+					<div class="rule"></div>
 	
 					<?php endwhile; ?>
 				</div>

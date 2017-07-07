@@ -12,7 +12,7 @@ $services_args = array(
 $services = get_posts($services_args);
 ?>
 
-<div class="col-xs-6 col-md-5 col-md-offset-1">
+<div class="col-xs-6">
 	
 	<?php if ($services) { ?>
 	
@@ -37,7 +37,7 @@ $services = get_posts($services_args);
 	 ?>
 	
 		<div class="list-block">
-			<h3><a href="<?php echo get_permalink($service->ID); ?>"><?php echo ($icon_tag) ? $icon_tag: ''; ?><?php echo $service->post_title; ?><i class="fa fa-angle-right fa-lg"></i></a></h3>
+			<a href="<?php echo get_permalink($service->ID); ?>" class="header-link"><?php echo $service->post_title; ?></a>
 			
 		<?php if ($service_children) { ?>
 			

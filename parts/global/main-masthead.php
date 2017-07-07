@@ -18,7 +18,9 @@ $freephone_num = get_field('freephone_num', 'option');
 			
 			<div class="col-xs-3">
 				<div class="header-action-btns text-right">
-					<button id="search-btn" class="btn btn-default"><span class="sr-only">Search</span><i class="fa fa-search fa-lg"></i></button>
+					<?php if (!is_search()) { ?>
+					<button id="search-btn" class="btn btn-default"><span class="sr-only">Search</span><i class="fa fa-search fa-lg"></i></button>			
+					<?php } ?>
 					<button id="nav-btn" class="btn btn-default in-active"><span class="sr-only">Menu</span><i class="fa fa-bars fa-lg"></i></button>
 				</div>
 			</div>

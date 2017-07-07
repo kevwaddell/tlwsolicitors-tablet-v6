@@ -8,6 +8,6 @@
   <input type="search" value="<?php the_search_query(); ?>" placeholder="Search…" class="form-control search-query" name="s" id="s" />
   
   <div class="search-btn-wrap">
-  	<input type="submit" id="searchsubmit" value="Start search" class="search-submit" /><i class="fa fa-angle-right fa-lg btn-pointer"></i>
+  	<button type="submit" id="searchsubmit" class="btn btn-default search-submit">Start Search</button>
   </div>
 </form>	

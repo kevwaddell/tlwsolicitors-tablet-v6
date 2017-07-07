@@ -8,7 +8,7 @@
 	<!-- End Google Tag Manager -->
 	<?php } ?>
 	<style>body{opacity: 0;}</style>
-	<style><?php readfile(get_stylesheet_directory() . '/_/css/criticalCSS.css'); ?></style>
+	<style id="critical-css"><?php readfile(get_stylesheet_directory() . '/_/css/criticalCSS.css'); ?></style>
 	<meta charset="<?php bloginfo('charset'); ?>">
 	
 	<meta name="viewport" content="user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
@@ -31,10 +31,12 @@
       var loadDeferredStyles = function() {
         var addStylesNode = document.getElementById("deferred-styles");
         var replacement = document.createElement("div");
+        var criticalCSS = document.getElementById("critical-css");
         replacement.innerHTML = addStylesNode.textContent;
 		document.body.appendChild(replacement);
         addStylesNode.parentElement.removeChild(addStylesNode);
        document.body.classList.remove("atfc-tablet-css");
+       criticalCSS.parentNode.removeChild(criticalCSS);
       };
       var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
       if (raf) { 

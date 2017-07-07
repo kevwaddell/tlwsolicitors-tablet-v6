@@ -33,11 +33,15 @@
 		 letterLimit: 10
 	 });
 	 
-	  $('.services-nav-link > span.title span').widowFix({
+	 $('.services-nav-link > span.title span').widowFix({
 			 letterLimit: 10
 	  });
 	  
-	   $('.credit > a span.description').widowFix({
+	 $('.credit > a span.description').widowFix({
+			 letterLimit: 10
+	  });
+	 
+	 $('a.article-link > span.title span').widowFix({
 			 letterLimit: 10
 	  });
 	
@@ -156,6 +160,7 @@
 		if ( $('#search-pop-up').hasClass('off') ) {
 			
 			$('#search-pop-up').removeClass('off').addClass('on');
+			$('body').addClass('search-open');
 		} 
 		
 		return false;
@@ -170,7 +175,7 @@
 			$('.turn-off').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 		
 				$(this).removeClass('turn-off').addClass('off');	
-				
+				$('body').removeClass('search-open');
 			});
 
 		} 
@@ -179,6 +184,39 @@
 		
 	});
 	
+	/* 	ROUTE FINDER BUTTON 
+			Button functions for route finder pop up
+		*/
+		
+		$('body').on(event_type,'button#route-finder-btn', function(){
+				
+			$('#route-finder-pop-up').toggleClass('off on');
+			$('body').addClass('route-finder-open');
+			
+			return false;
+			
+		});
+		
+		$('body').on(event_type,'button#close-route-finder', function(){	
+			
+			if ( $('#route-finder-pop-up').hasClass('on') ) {
+				
+				$('#route-finder-pop-up').removeClass('on').addClass('turn-off');
+				
+				$('.turn-off').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+			
+					$(this).removeClass('turn-off').addClass('off');
+					$('body').removeClass('route-finder-open');
+					
+				});
+	
+			} 
+					
+			return false;
+		});
+		
+		/* END OF ROUTE FINDER BUTTON FUNCTIONS */
+
     
     /* POST CONTINUE READING BUTTONS
 	   Functions for the read more button which reveals more
@@ -420,15 +458,14 @@
 			
 		//console.log("Loaded");
 		//$('body').removeClass('atfc-tablet-css');
-		$('body').removeClass('loading');
 		
-		$('.full-bg-img').each(function(index, Element) {
-		var src = $(Element).data('src');
-		//console.log(src);
-		if (src !== undefined) {
-			$(Element).css('background-image', 'url(' +src+ ')');
-			}
-		});
+		setTimeout(function(){
+        	$('body').removeClass('loading');
+		}, 2000);
+		
+		if ($('#wide-map-canvas').length === 1) {
+		wide_map_init();	
+		}
 		
 		$('.has-bg-img').each(function(index, Element) {
 				var src = $(Element).data('src');
