@@ -11,7 +11,7 @@ $poster_full_src = wp_get_attachment_image_src($poster_img_id, 'full' );
 	<div class="container-fluid">
 
 		<div class="row">			
-			<div class="col-xs-10 col-xs-offset-1">
+			<div class="col-md-10 col-md-offset-1">
 				<div class="video-wrapper">
 					<video controls preload="auto" id="service-video" poster="<?php echo $poster_full_src[0];?>">
 						<source src="<?php echo $video_webm; ?>" type="video/webm" />
