@@ -10,9 +10,38 @@ $services_args = array(
 );
 
 $services = get_posts($services_args);
+
+$videos_pg_id = get_page_id('videos');
+$downloads_pg_id = get_page_id('downloads');
+
+$media_args = array(
+'post_type'		=> 'page',
+'orderby'		=> 'title',
+'include'		=> array($videos_pg_id, $downloads_pg_id),
+'order'			=> 'ASC'
+);
+
+$media_pages = get_posts($media_args);
 ?>
 
 <div class="col-xs-6">
+	
+	<?php if ($media_pages) { ?>
+		
+		<h3>TLW Media</h3>
+	
+		<div class="list-block">
+	
+			<ul class="list-unstyled">
+			
+				<?php foreach ($media_pages as $media_page) { ?>
+				<li><a href="<?php echo get_permalink($media_page->ID); ?>"><?php echo get_the_title($media_page->ID); ?></a></li>
+				<?php } ?>
+			
+			</ul>
+			
+		</div>
+	<?php } ?>
 	
 	<?php if ($services) { ?>
 	
