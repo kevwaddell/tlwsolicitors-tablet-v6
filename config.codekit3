@@ -1527,6 +1527,12 @@
 		"oAP": "\/parts\/landingPage\/banner-img.php",
 		"oF": 0
 		},
+	"\/parts\/landingPage\/banner-video.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/parts\/landingPage\/banner-video.php",
+		"oF": 0
+		},
 	"\/parts\/landingPage\/contact-form.php": {
 		"ft": 8192,
 		"oA": 2,
