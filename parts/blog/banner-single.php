@@ -6,10 +6,11 @@ $date = get_the_date('l - jS F - Y');
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
-				<header class ="banner-title font-slab-serif caps">
+				<div class="img" style="background-image: url(<?php add_banner_feat_img($img_post);?>)">
+					<header class ="banner-title font-slab-serif caps">
 					<?php echo $date; ?>
-				</header>
-				<div class="img" style="background-image: url(<?php add_banner_feat_img($img_post);?>)"></div>
+					</header>
+				</div>
 			</div>
 		</div>
 	</div>
