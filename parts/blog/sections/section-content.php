@@ -76,7 +76,7 @@ $section_title = "Article text";
 				</div>
 				
 				<?php if (!empty($post_content['extended'])) { ?>
-				<button id="continue-read-btn" class="btn btn-default btn-block"><?php echo $more_btn_text; ?><i class="fa fa-plus-circle"></i></button>
+				<button id="continue-read-btn" class="btn btn-default btn-block font-slab-serif caps"><?php echo $more_btn_text; ?><i class="fa fa-plus-circle"></i></button>
 				<?php } ?>	
 														
 			</div>
