@@ -13,22 +13,19 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1">
+					<div class="img" style="background-image: url(<?php echo $wide_banner_img[0];?>)">
 					<header class ="banner-title font-slab-serif caps">
 						404 Page not found
 					</header>
-					<div class="img" style="background-image: url(<?php echo $wide_banner_img[0];?>)"></div>
+					</div>
 					<i class="fa fa-exclamation-triangle"></i>
 				</div>
 			</div>
 		</div>
 	</section>			
-		
+	<div class="rule"></div>	
 	<?php } ?>	
 	
-		<!-- FREEPHONE NUMBER SECTION -->
-		<?php get_template_part( 'parts/global/freephone', 'number' ); ?>
-		<?php get_template_part( 'parts/global/color', 'strip' ); ?>	
-				
 		<article <?php post_class("content-section"); ?>>
 		
 			<div class="container-fluid">	
