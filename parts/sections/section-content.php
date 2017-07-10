@@ -23,7 +23,7 @@ $more_btn_text = "Continue Reading";
 				<div class="service-label font-slab-serif caps txt-col-gray"><?php the_title(); ?></div>		
 				<?php } ?>
 
-				<div class="entry wide-entry">
+				<div class="entry">
 				
 					<div class="main-txt">
 						<?php if (!empty($post_content['extended'])) { ?>
