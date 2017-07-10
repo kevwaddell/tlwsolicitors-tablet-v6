@@ -92,7 +92,6 @@
 			
 		});
 	
-	
 	$('#top-nav').on('click', "li.with-sub-nav > a", function(){
 		var parent = $(this).parent();
 		var siblings = $(parent).siblings();
@@ -109,34 +108,7 @@
 
 	return false;	
 	});
-	
-	//DOWNLOAD BOOKLET GUIDE BUTTON
-	
-	$('body').on(event_type,'button#file-download-btn', function(){
-		
-		var next = $(this).next();
-		
-		$(next).toggleClass('form-open form-closed');	
-		$('html, body').animate({scrollTop: ($("button#file-download-btn").offset().top) - 30}, 500);	
-		
-		return false;
-		
-	});
-	
-	$(document).bind('gform_confirmation_loaded', function(event, formId){
-            if(formId === 19 && $('a#download-booklet-btn').length === 1) {
-               $('a#download-booklet-btn').removeClass('hidden');
-               $('html, body').animate({scrollTop: ($("button#booklet-download-btn").offset().top - 20)}, 500);	
-            }
-            
-            if(formId === 20 && $('#hidden-download').length === 1) {
-               $('#hidden-download').removeClass('hidden');
-               $('.gform_heading').addClass('hidden');
-               $('html, body').animate({scrollTop: ($("#hidden-download").offset().top - 20)}, 500);	
-            }
-    });
- 
-	
+ 	
 	$('body').on('click', "li.with-sub-nav > a", function(){
 		var parent = $(this).parent();
 		$(parent).siblings().removeClass('sl-tl-open').addClass('sl-tl-closed');
@@ -302,8 +274,7 @@
 		});
 	    
 	    /* FAQ's BUTTON ACTIONS
-		This function controls the FAQ's answers button
-		which shows and hides the answer to the question
+		This function controls the FAQ's next and previous buttons
 	    */
 	    
 	     $('body').on(event_type,'.faq-nav > button', function(){  
@@ -336,120 +307,63 @@
 		    $('button#prev-faq').data('src', prev_id); 
 		    $('button#next-faq').attr('data-src', next_id); 
 			$('button#next-faq').data('src', next_id); 
-		    
-			/*
-			console.log($('#'+faq_id).prev().length);
-		    console.log(prev_id); 
-		    console.log($('#'+faq_id).next().length);
-		    console.log(next_id); 
-			*/
 			
 			return false;
 			
 		});
-		/* END FAQ's BUTTON ACTIONS
+		/* END FAQ's BUTTON ACTIONS */
+	  
 		
-		/* Law Awards Pop up Function
-	   This function controls the Xmas pop up box
-    	*/
-    	
-    	 $('body').on(event_type,'button#close-awards-btn', function(){
-		    
-		   $(this).parent().removeClass('open').addClass('closed');   
-	    	      			
-			return false;
-			
-		});
-		
-		$('body').on(event_type,'#awards-pop-up', function(){
-		    
-		    $('button#close-awards-btn').trigger(event_type);
-		
-		});
-
-		
-		/* PAGE BANNER TAG SCROLLER */
-		function startTagInterval() {
-		tagInterval = setInterval(changeTag, 7000);
-		}
-	
-		function changeTag() {
-			
-			var currentTag = $('.tag-scroller').find('.active');
-			var nextTag = $(currentTag).next();
-			
-			
-				if ($(nextTag).length === 0) {
-				nextTag = $('.tag-scroller-txt').eq(0);	
-				}
-				
-			$(currentTag).fadeToggle(500).removeClass('active');
-			$(nextTag).fadeToggle(1000).addClass('active');
-	
-			//console.log(nextTag);
-		}
-		
-		startTagInterval();
-		
-		/* PAGE FEEDBACK SCROLLER */
-		function startFeedbackInterval() {
-		tagInterval = setInterval(changeQuote, 7000);
-		}
-		
-		function changeQuote() {
-			
-			var currentQuote = $('.feedback-section-inner').find('.item.active');
-			var nextQuote = $(currentQuote).next();
-			
-			if ($(nextQuote).length === 0) {
-			nextQuote = $('.feedback-section-inner').find('.item').eq(0);	
-			}
-			
-			$(currentQuote).animate({left: '-100%'}, 500, function(){
-				
-				$(this).removeClass('active').css('left', '100%');
-				
-			});
-			
-			$(nextQuote).animate({left: '0%'}, 500, function(){
-				
-				$(this).addClass('active');
-				
-			});
-			
-			//console.log(nextTag);
-		}
-		
-		if ($('.feedback-section-wrapper').length === 1) {
-		startFeedbackInterval();
-		}
-	
-		/*
-		OUR TEAM FUNCTIONS
-		Button to show profile biog.
-		Team section scrolling functions
-		*/
-		
-		$('.team-profile').on(event_type, 'button.profile-info-btn', function(){
-			
-			$(this).parents('.team-profile').siblings().find('.profile-txt').removeClass('txt-view').addClass('txt-hide');
-			
-			$(this).parent().toggleClass('txt-hide txt-view');
-			
-			return false;
-		});
-		
-		/* FAQ's BUTTON ACTIONS
-		This function controls the FAQ's answers button
-		which shows and hides the answer to the question
+		/* VIDEO LINKS BUTTON ACTIONS
+		These functions control the pop up videos
+		that show that embed the your Tube video into the pop up inner wrapper
 	    */
-	    
-	     $('body').on(event_type,'button.view-faq-btn', function(){
-		   
-	    	$(this).parent().toggleClass('open closed');     
-	    	      			
-			return false;
+	  
+	  $('a.video-link').on(event_type, function(){
+			var video_id = $(this).attr('href');
+			var video = $(video_id).find('video');
+			var video_wrap_id = $(video).attr('id')+"-viewing";
 			
+			$('body').addClass('video-open');
+			
+			$('#video-viewer').animate({top: '0px', opacity: 1}, 500, function(){
+				$(this).toggleClass('viewer-closed viewer-open').removeAttr('style');
+				$(video).clone().attr('id', video_wrap_id).appendTo('.video-viewer-inner');
+			});
+			
+			return false;
+		});
+		
+	  $('button#close-video').on(event_type, function(){
+			
+			$(this).parent().animate({top: '100%', opacity: 0}, 500, function(){
+				$(this).toggleClass('viewer-open viewer-closed').removeAttr('style');
+				$(this).find('.video-viewer-inner').empty();
+				$('body').removeClass('video-open');
+			});
+			
+			return false;
+
+		});
+		
+		/* POST GALLERY FUNCTION */
+		
+		$('body').on(event_type,'a.gallery-img-link', function(){
+			
+			$(this).parent().siblings().removeClass('active');
+			$(this).parent().addClass('active');
+			var path = $(this).attr('href');
+			var target = $('.gallery-items-viewer');
+			var img = new Image();
+			$(target).empty();
+			
+			$(img).attr('src', path).addClass('animated fadeIn').appendTo(target);
+			
+			//console.log(img);
+			
+		
+		return false;
+		
 		});
 			
 	});	

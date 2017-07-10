@@ -7,26 +7,47 @@ $videos_active = $section['videos_active'];
 <?php 
 $section_title = $section['section_title'];	
 $videos = $section['videos'];
-
-if (empty($color)) {
-$color = "red";	
-}
 ?>
-<section id="<?php echo $section['acf_fc_layout']; ?>" class="pg-section with-icon-logo bg-col-<?php echo $color; ?>">
-	<div class="overlay"></div>
-	<div class="container">
-		<h2 class="text-center section-header bg-col-grayDk"><?php echo $section_title; ?></h2>
-	</div>		
-	<div class="container">
-		<div class="row">		
-			<?php foreach ($videos as $video) { ?>
-			<div class="col-xs-<?php echo (count($videos) > 1) ? '6':'6 col-xs-offset-3'; ?>">
-				<div class="video-wrap">
-					<?php echo str_replace(' width="800" height="450"','', $video['video']); ?>
+<section id="<?php echo $section['acf_fc_layout']; ?>" class="pg-section">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				
+				<h2 class="section-header"><?php echo $section_title; ?></h2>	
+				<div class="lg-intro">
+					<?php the_content(); ?>
 				</div>
+				<div class="rule"></div>
+				<div class="row">
+					<?php foreach ($videos as $k => $poster) { 
+					$poster_full_src = wp_get_attachment_image_src($poster['poster_img'], 'full' );
+					$poster_thumb_src = wp_get_attachment_image_src($poster['poster_img'], 'thumbnail' );	
+					$video = $video['video'];
+					?>
+					<div class="col-xs-6">
+						<a href="#video-<?php echo ($k+1); ?>" class="video-link has-bg-img poster-img" style="background-image: url(<?php echo $poster_thumb_src[0]; ?>)" data-src="<?php echo $poster_full_src[0]; ?>"></a>
+					</div>
+					<?php } ?>
+				</div>
+				
 			</div>
-			<?php } ?>
-		</div>
+		</div>	
+	</div>
+	
+	<div class="hidden hidden-videos">
+		<?php foreach ($videos as $k => $video) { 
+			$video_webm = $video['video_webm'];
+			$video_mp4 = $video['video_mp4'];
+			$video_poster_id = $video['poster_img'];
+			$poster_src = wp_get_attachment_image_src($video_poster_id, 'full' );
+			?>
+			<div id="video-<?php echo ($k+1); ?>">
+				<video controls preload="auto" id="service-video-<?php echo ($k+1); ?>" poster="<?php echo $poster_src[0];?>">
+					<source src="<?php echo $video_webm; ?>" type="video/webm" />
+					<source src="<?php echo $video_mp4; ?>" type="video/mp4" />
+				</video>
+			</div>
+		<?php } ?>
 	</div>
 		
 </section>

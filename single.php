@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 
 	<?php if ( have_posts() ): while ( have_posts() ) : the_post(); 
+	$gallery_active = get_field('gallery_active');	
+	$show_author = get_field('show_author');
 	$all_forms_active = get_field('all_forms_active', 'option');
 	$form_active = get_field('add_form');	
 	$related_posts_active = get_field('related_posts_active');

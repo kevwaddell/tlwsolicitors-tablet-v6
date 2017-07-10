@@ -12,31 +12,26 @@ font-family: @lite-font;
 font-weight: 300; 
 font-stretch: normal;	
 }
-
 .font-normal {
 font-family: @reg-font;
 font-weight: normal; 
 font-stretch: normal;	
 }
-
 .font-cond {
 font-family: @cond-font;
 font-weight: 900; 
 font-stretch: normal;	
 }
-
 .font-serif {
 font-family: @serif-font;
 font-weight: normal; 
 font-stretch: normal;	
 }
-
 .font-slab-serif {
 font-family: @slab-serif;
 font-weight: normal; 
 font-stretch: normal;	
 }
-
 .font-slab-serif-bold {
 font-family: @slab-serif-bold;
 font-weight: normal; 
@@ -118,6 +113,7 @@ font-style: italic;
 list-style: none;
 .pad-left(0);
 }
+
 /* BACKGROUND */
 .bg-col(@col) {
 background-color: @col;
@@ -137,17 +133,11 @@ background-color: @col;
 .bg-col-red-dk {
 .bg-col(@redMid);	
 }
-.bg-col-red-lt {
-.bg-col(lighten(@red, 20%));	
-}
 .bg-col-purple {
 .bg-col(@purple);	
 }
 .bg-col-green {
 .bg-col(@green);	
-}
-.bg-col-green-dk {
-.bg-col(@green-dk);	
 }
 .bg-col-pink {
 .bg-col(@pink);	
@@ -379,32 +369,27 @@ border-color:  ~"@{borderCol}";
   -moz-box-shadow: none;
   box-shadow: none;	
 }
-
 .box-sizing {
 -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 -moz-box-sizing: border-box;    /* Firefox, other Gecko */
 box-sizing: border-box; /* Opera/IE 8+ */
 }
-
 .no-box-sizing {
 -webkit-box-sizing: content-box; /* Safari/Chrome, other WebKit */
 -moz-box-sizing: content-box; 
 box-sizing: content-box;	
 }
-
 .no-rounded {
 -webkit-border-radius: 0px;
 -moz-border-radius: 0px;
 border-radius: 0px;
 }
-
 .no-transition {
   -webkit-transition: none;
   -moz-transition: none;
   -o-transition: none;
   transition: none;
 }
-
 .rule {
 .mag-top(3);
 .mag-bot(3);
@@ -438,7 +423,6 @@ border-radius: 0px;
 	}
 
 }
-
 .clearfix {
   &:before,
   &:after {

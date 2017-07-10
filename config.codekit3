@@ -1066,23 +1066,6 @@
 		"sM": 0,
 		"sU": 0
 		},
-	"\/_\/less\/team-list.less": {
-		"aP": 0,
-		"bl": 0,
-		"dJ": 0,
-		"ft": 1,
-		"ie": 1,
-		"iI": 0,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "\/_\/css\/team-list.css",
-		"oF": 0,
-		"oS": 0,
-		"rU": 0,
-		"sI": 0,
-		"sM": 0,
-		"sU": 0
-		},
 	"\/_\/less\/toolkit.less": {
 		"aP": 0,
 		"bl": 0,
@@ -1854,7 +1837,7 @@
 	"creationDate": 520174677,
 	"displayValue": "tlwsolicitors-tablet-v6",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "brackets_brown"
+	"iconImageName": "meme-cocaine"
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
