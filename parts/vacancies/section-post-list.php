@@ -33,7 +33,6 @@ $post_count = $wp_query->found_posts;
 				</div>
 				<div class="rule"></div>
 				<?php if ( have_posts() ): ?>
-				<div class="row">
 				<?php while ( have_posts() ) : the_post();
 				$date = get_the_date('l - jS F - Y');
 				$job_title = get_field('job_title');
@@ -41,19 +40,15 @@ $post_count = $wp_query->found_posts;
 				$short_description = get_field('short_description');
 				$job_closing_date = get_field( 'job_closing_date');
 				?>	
-					<div class="col-xs-6">
-						<article <?php post_class(); ?>>
-							<div class="close-date text-center">Closing date: <?php echo (empty($job_closing_date)) ? "TBA": date('d.m.Y', strtotime($job_closing_date) ); ?></div>
-							<h4><?php echo $job_title; ?></h4>
-							<div class="ref">[ref: <?php echo $job_ref; ?>]</div>
-							<div class="description">
-								<?php echo $short_description; ?>
-							</div>
-							<a href="<?php esc_url( the_permalink() ); ?>" class="btn btn-default btn-block font-slab-serif caps" title="View: <?php the_title_attribute(); ?> vacancy" rel="bookmark">View vacancy</a>
-						</article>
+				<article <?php post_class(); ?>>
+					<div class="close-date text-center">Closing date: <?php echo (empty($job_closing_date)) ? "TBA": date('d.m.Y', strtotime($job_closing_date) ); ?></div>
+					<h4><?php echo $job_title; ?> -  <small class="ref">[ref: <?php echo $job_ref; ?>]</small></h4>
+					<div class="description">
+						<?php echo $short_description; ?>
 					</div>
+					<a href="<?php esc_url( the_permalink() ); ?>" class="btn btn-default btn-block font-slab-serif caps" title="View: <?php the_title_attribute(); ?> vacancy" rel="bookmark">View vacancy</a>
+				</article>
 				<?php endwhile; ?>
-				</div>
 			<?php if ($post_count > $posts_per_page) { ?>
 			<div class="vacs-page-links">	
 				<?php wp_pagenavi(); ?>
