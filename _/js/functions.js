@@ -16,7 +16,11 @@
 	        
 	         if (hash[0] === "gclid" && $('#input_22_27').length === 1) {
 		      $('input#input_22_27').val(hash[1]);  
-	        }	   
+	        }	 
+	        
+	        if (hash[0] === "gclid" && $('#input_26_24').length === 1) {
+		      $('input#input_26_24').val(hash[1]);  
+	        }	  
 	        
 	        if (hash[0] === "gclid" ) { 
 		    $.cookie(hash[0], hash[1], {expires: 1, path: '/'});  
@@ -369,9 +373,6 @@
 	});	
 	
 	$(window).bind('load',function(){
-			
-		//console.log("Loaded");
-		//$('body').removeClass('atfc-tablet-css');
 		
 		setTimeout(function(){
         	$('body').removeClass('loading');
