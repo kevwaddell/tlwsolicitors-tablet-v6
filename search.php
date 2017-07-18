@@ -8,7 +8,7 @@ $search_query = get_search_query();
 //echo '<pre>';print_r($posts);echo '</pre>';
 ?>
 	
-<article class="page">
+<article class="page search-results">
 	<div class="container-fluid">	
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
@@ -22,7 +22,7 @@ $search_query = get_search_query();
 		</div>
 	</div>
 </article>
-
+<div class="rule"></div>
 <section class="search-list">
 
 	<?php if ( have_posts() ): ?>
