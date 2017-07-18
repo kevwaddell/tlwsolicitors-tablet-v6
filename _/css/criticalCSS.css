@@ -2365,7 +2365,8 @@ body.atfc-tablet-css #top-banner .banner-links-imgs a {
   background-color: #E9E9E9;
 }
 body.atfc-tablet-css section#video-banner .video-wrapper {
-  border: 1px solid #4b4b4b;
+  border: 1px solid #E9E9E9;
+  background-color: #E9E9E9;
   height: 414px;
   overflow: hidden;
 }
