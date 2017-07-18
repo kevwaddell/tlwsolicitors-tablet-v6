@@ -50,7 +50,6 @@ function wide_map_init() {
 	wide_map = new google.maps.Map(document.getElementById('wide-map-canvas'), mapOptions);
 		
 	marker = new google.maps.Marker({position: myLatLang,map: wide_map,icon: image,title: "TLW Solicitors"});
-	
 };
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWfwM9bo9zsSfrpXwMZ0bDZbhvgiP1tKo&callback=wide_map_init" async defer></script>
