@@ -2274,6 +2274,7 @@ body.atfc-tablet-css #breadcrumbs a {
 }
 body.atfc-tablet-css #slim-top-banner {
   height: 250px;
+  overflow: hidden;
 }
 body.atfc-tablet-css #slim-top-banner .container-fluid,
 body.atfc-tablet-css #slim-top-banner .row,
@@ -2291,7 +2292,7 @@ body.atfc-tablet-css #slim-top-banner .img {
   background-color: #E9E9E9;
 }
 body.atfc-tablet-css #slim-top-banner .banner-title,
-body.atfc-tablet-css #slim-top-banner i {
+body.atfc-tablet-css #slim-top-banner i.fa {
   display: none;
 }
 body.atfc-tablet-css #contact-us-banner {
