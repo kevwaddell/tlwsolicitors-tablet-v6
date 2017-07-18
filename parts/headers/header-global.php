@@ -32,7 +32,6 @@
 	
 	<?php wp_head(); ?>
 	
-<!--
 	<script>
       var loadDeferredStyles = function() {
         var addStylesNode = document.getElementById("deferred-styles");
@@ -49,7 +48,6 @@
 	      raf(function() { window.setTimeout(loadDeferredStyles, 0);});
      } else { window.addEventListener('load', loadDeferredStyles); }
 	</script>
--->
 	
 	<?php 
 	if ( isset($_GET['src']) && $_GET['src'] == "mis-sold-solar-co-uk" ) {
