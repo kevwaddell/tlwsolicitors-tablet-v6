@@ -1,5 +1,4 @@
 <?php 
-$email = get_field( 'main_email', 'options' );
 $contact_pg = get_page_id( 'contact-us' );
 ?>
 <nav id="top-nav" class="nav-closed">
