@@ -17,17 +17,17 @@ $map_active = $section['map_active'];
 	
 	//echo $map_marker;
 ?>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWfwM9bo9zsSfrpXwMZ0bDZbhvgiP1tKo"></script>
 <script>
-var TLW_MAP_ID = 'TLW_style';
+function wide_map_init() {
+	var TLW_MAP_ID = 'TLW_style';
 	
-var wide_map;
-var TLW_MAPTYPE_ID = 'wide_map';
-var myLatLang = new google.maps.LatLng( "<?php echo $location['lat']; ?>", "<?php echo $location['lng']; ?>");
-var img_url = "<?php echo $map_marker; ?>";
-var marker;
+	var wide_map;
+	var TLW_MAPTYPE_ID = 'wide_map';
+	var myLatLang = new google.maps.LatLng( "<?php echo $location['lat']; ?>", "<?php echo $location['lng']; ?>");
+	var img_url = "<?php echo $map_marker; ?>";
+	var marker;
 
- var image = {
+	var image = {
 	 url: img_url,
 	 // This marker is 20 pixels wide by 32 pixels tall.
 	 size: new google.maps.Size(60, 70),
@@ -36,9 +36,6 @@ var marker;
 	 // The anchor for this image is the base of the flagpole at 0,32.
 	 anchor: new google.maps.Point(30, 60)
 	 };
-	
-
-function wide_map_init() {
 	
 	//lert("Loaded");
 
@@ -55,10 +52,8 @@ function wide_map_init() {
 	marker = new google.maps.Marker({position: myLatLang,map: wide_map,icon: image,title: "TLW Solicitors"});
 	
 };
-
-google.maps.event.addDomListener(window, 'load', wide_map_init);
-	
 </script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWfwM9bo9zsSfrpXwMZ0bDZbhvgiP1tKo&callback=wide_map_init" async defer></script>
 <a name="find-us" id="find-us" class="section-target"></a>
 <div class="rule"></div>
 <section id="wide-map" class="pg-section">
