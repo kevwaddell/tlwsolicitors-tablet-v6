@@ -8,7 +8,7 @@ $body_classes = array('atfc-desktop-css, loading');
 <!-- Google Tag Manager -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PLBR4F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- End Google Tag Manager -->
 <?php } ?>
-	
+<a class="sr-only" href="#main-content">Skip to main content</a>	
 <div class="tlw-wrapper">
 	
 	<!-- HEADER LOGO AND NAVIGATION -->
