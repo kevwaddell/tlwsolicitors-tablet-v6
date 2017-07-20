@@ -32,6 +32,8 @@
 	getUrlVars();
 
 	$(document).ready(function (){
+	
+	$.getScript("https://api.feefo.com/api/javascript/tlw-solicitors");
 		
 	 $('.main-txt > p,h1,h2,h3,h4,h5,h6').widowFix({
 		 letterLimit: 10
@@ -71,7 +73,7 @@
 		
 		var inner_h = $('#top-nav').find('.nav-wrapper').outerHeight();
 				
-			$('#top-nav').animate({height: inner_h+"px"}, 300, function(){
+			$('#top-nav').animate({height: "95vh"}, 300, function(){
 				
 				$('body').toggleClass('nav-closed nav-open');
 				$(this).toggleClass('nav-closed nav-open').removeAttr('style');	

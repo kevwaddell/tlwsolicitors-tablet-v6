@@ -30,6 +30,11 @@ min-height: 100%;
 overflow:hidden;
 opacity: 1;
 	
+	#feefologohere {
+	.animated;
+	.fadeIn;		
+	}
+	
 	&.nav-open, 
 	&.modal-open,
 	&.search-open,
@@ -42,9 +47,17 @@ opacity: 1;
 		filter: blur(5px);	
 		overflow: hidden;
 		pointer-events: none;	
+		}
+		
+		#feefologohere {
+		.fadeOut;	
 		}	
 	}
 
+}
+
+.tether-theme-feefo {
+-webkit-overflow-scrolling: touch;	
 }
 
 .no-js {

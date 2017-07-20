@@ -31,7 +31,11 @@
 </div><!-- MAIN WRAPPER END -->
 		
 		<?php get_template_part( 'parts/global/popups/all', 'popups' ); ?>
-				
+		
+		<?php if (!is_front_page()) { ?>
+		<div id="feefologohere"></div>			
+		<?php } ?>
+		
 		<?php wp_footer(); ?>
 
 	</body>
