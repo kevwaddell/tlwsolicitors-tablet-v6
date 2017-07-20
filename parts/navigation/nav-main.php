@@ -16,7 +16,7 @@ $contact_pg = get_page_id( 'contact-us' );
 					</ul>
 				</div>
 				<div class="col-xs-6">
-				<?php wp_nav_menu(array( 'container' => '', 'menu_class' => 'text-right top-nav-icon-links list-inline', 'theme_location' => 'social_links_menu', 'fallback_cb' => false ) ); ?>
+				<button id="close-nav" class="btn"><i class="fa fa-times"></i><span class="sr-only">Close navigation</span></button>
 				</div>
 			</div>
 			
@@ -34,5 +34,4 @@ $contact_pg = get_page_id( 'contact-us' );
 		</div>
 		
 	</div>
-	<button id="close-nav" class="btn"><i class="fa fa-angle-up fa-2x"></i><span class="sr-only">Close navigation</span></button>
 </nav>

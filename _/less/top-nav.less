@@ -8,8 +8,8 @@ overflow: hidden;
 	}
 
 	&.nav-open {
-	height: 90vh;
-	.border-bot(@redMid; 1);
+	height: 95vh;
+	//.pad-bot(0);
 	}
 
 	.nav-wrapper {
@@ -23,23 +23,21 @@ overflow: hidden;
 	
 	button#close-nav {
 	.pad-all(0);	
-	.abs;
-	left: 50%;
-	.bottom(-1.5);
-	.mag-left(-2.5);
 	.h(5);
 	.w(5);
-	.border-radius(100%, 0, 0, 100%);
-	.bg-col-red-dk;
-	.txt-col-wht;
+	.rounded(100%);
+	.bg-col(@wht);
+	.border(@grayDk; 0.1);
+	.txt-col-grayDk;
 	outline: none;
-	.transition(0.3s, ease-in-out);
-	z-index: 2;
+	.fright;
 		i {
-		.mag-top(-1);	
+		.line-h(4.8);
+		.font-size(2);	
 		}
 		&:active {
-		.bottom(-0.5);
+		.bg-col-grayDk;
+		.txt-col-wht;
 		}
 	}
 	
