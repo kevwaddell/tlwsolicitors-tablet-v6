@@ -12,6 +12,7 @@
 	</script>
 	<!-- Adwords Call tracking -->
 	<?php } ?>
+	<style>body{opacity: 0;}</style>
 	<style id="critical-css"><?php readfile(get_stylesheet_directory() . '/_/css/criticalCSS.css'); ?></style>
 	<meta charset="<?php bloginfo('charset'); ?>">
 	
