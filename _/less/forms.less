@@ -296,7 +296,7 @@ max-width: 100% !important;
 	input[type=number],
 	input[type=password],
 	input[type=file] {
-	.font-size(1.4)!important;
+	.font-size(1.6)!important;
 	.border(@grayDk, 0.1);
 	width: 100% !important;
 		&:focus {
@@ -305,8 +305,9 @@ max-width: 100% !important;
 	}
 	
 	textarea {
-	.font-size(1.4)!important;
+	.font-size(1.6)!important;
 	.border(@grayDk, 0.1);
+	.pad-all(1.5);
 	width: 100% !important;
 		&:focus {
 		.border-col(@red);	
@@ -314,7 +315,7 @@ max-width: 100% !important;
 	}
 	
 	select {
-	.font-size(1.4)!important;	
+	.font-size(1.6)!important;	
 	width: 100% !important;	
 		&:focus {
 		.border-col(@red);	
@@ -379,7 +380,6 @@ max-width: 100% !important;
 	.gform_wrapper input[type="tel"],
 	.gform_wrapper input[type="file"] {
 	.h(4);	
-	.font-size(2) !important;
 	.pad-all(1);
 	.border-col(@grayDk);
 	.bg-col(@wht);
@@ -421,9 +421,10 @@ max-width: 100% !important;
 	.gform_wrapper textarea.large {
 		//.h(18.7);
 		.h(21.8);
-		.pad-all(2);
-		.font-size(2);
-		.border-col(@grayDk);
+	}
+	
+	.gform_wrapper textarea.medium {
+		.h(15);
 	}
 	
 	.bootstrap-select button {
@@ -490,9 +491,9 @@ max-width: 100% !important;
 		.rel;
 		.no-border;
 		.no-rounded;
-		.bg-col-red-dk;
+		.bg-col-red;
 		.txt-col-wht;
-		.h(4);
+		.h(5);
 		.font-size(1.6);
 		.line-h(1.6);
 		.caps;
@@ -512,12 +513,12 @@ max-width: 100% !important;
 				&:after {
 				font-family: FontAwesome;
 				content: "\f105";	
-				.line-h(4);
+				.line-h(5);
 				}
 			}
 			
 			&:active {
-			.bg-col-red;
+			.bg-col-red-dk;
 			}
 		}
 	}
@@ -526,14 +527,19 @@ max-width: 100% !important;
 		
 		.gform_previous_button, .gform_next_button {
 		.no-border;
-		.bg-col-red;
+		.no-rounded;
+		.bg-col-grayDk;
 		.txt-col-wht;	
 		.w(15);	
 		.font-slab-serif;
 		.caps;
 		.mag-bot(2);
+		.font-size(1.6);
+		.line-h(1.6);
+		.pad-all(0);
+		.line-h(4);
 			&:active {
-			.bg-col-red-dk;
+			.bg-col-gray;
 			}
 		}
 		
@@ -545,9 +551,9 @@ max-width: 100% !important;
 		.rel;
 		.no-border;
 		.no-rounded;
-		.bg-col-red-dk;
+		.bg-col-red;
 		.txt-col-wht;
-		.h(4);
+		.h(5);
 		.font-size(1.6);
 		.line-h(1.6);
 		.caps;
@@ -572,7 +578,7 @@ max-width: 100% !important;
 			}
 			
 			&:active {
-			.bg-col-red;
+			.bg-col-red-dk;
 			}
 		}
 	}

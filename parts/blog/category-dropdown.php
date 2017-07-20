@@ -10,18 +10,15 @@ $cats = get_categories($cats_args);
 //echo '<pre>';print_r($archives);echo '</pre>';
 ?>
 <?php if ($cats) { ?>
-<div class="cats-dropdown">
-	
-	<select id="cats" class="selectpicker" data-width="100%">
-		<option value="0" data-hidden="true">Blog Categories</option>
-		<?php foreach ($cats as $cat) { 
-		$category_id = 	$cat->term_id;
-		?>
-		<option value="<?php echo get_category_link( $category_id ); ?>"><?php echo get_cat_name($category_id); ?></option>
-		<?php } ?>
-	</select>
-	
-</div>
+<select id="cats" class="selectpicker" data-width="100%">
+	<option value="0" data-hidden="true">Blog Categories</option>
+	<?php foreach ($cats as $cat) { 
+	$category_id = 	$cat->term_id;
+	?>
+	<option value="<?php echo get_category_link( $category_id ); ?>"><?php echo get_cat_name($category_id); ?></option>
+	<?php } ?>
+</select>
+
 <script type="text/javascript">
 	<!--
 	var dropdown = document.getElementById("cats");
