@@ -16,7 +16,7 @@ $download_section_files = $section['download_section_files'];
 					<?php the_content(); ?>
 				</div>
 				<div class="rule"></div>
-				<div class="row">
+				<div class="row download-grid">
 				<?php foreach ($download_section_files as $k => $file) { 
 				$img = wp_get_attachment_image_src($file['file_image'], 'medium' );	
 				?>

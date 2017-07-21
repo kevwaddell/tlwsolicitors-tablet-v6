@@ -15,7 +15,7 @@ if ($feedback_quotes) { ?>
 
 <!-- TEAM PROFILES SECTION -->
 <section id="feedback-section" class="pg-section feedback-list">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
 				<h2 class="section-header"><?php echo $section_title; ?></h2>	
