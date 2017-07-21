@@ -283,36 +283,27 @@
 		This function controls the FAQ's next and previous buttons
 	    */
 	    
+	    
 	     $('body').on(event_type,'.faq-nav > button', function(){  
 		     
 		    var faq_id = $(this).data().src;
-		    var prev_id;
-		    var next_id;
-		    
+		    var container = $("#main-content");
+		    var scrollTo = $("section#faqs-section");
+		   
+		    $(this).siblings().removeClass('btn-active');
+		    $(this).addClass('btn-active');
+		    		    
+		   container.animate({
+		   scrollTop: scrollTo.offset().top - container.offset().top + container.scrollTop() - 85
+		   });
+	
 		    $('.faq-item.active').animate({top: '100%', opacity: 0}, 300, function(){
-				$(this).removeClass('active');    
+				$(this).removeClass('active'); 
 		    });
 		    
-		    $('#'+faq_id).animate({top: '0%', opacity: 1}, 300, function(){
+		    $('#'+faq_id).animate({top: '0%', opacity: 1}, 500, function(){
 				$('#'+faq_id).addClass('active');     
 		    });
-		    
-		    if ($('#'+faq_id).prev().length === 1) {
-			prev_id = $('#'+faq_id).prev().attr('id');
-		    } else {
-			prev_id = $('.faq-item').last().attr('id');   
-		    }
-		    
-		    if ($('#'+faq_id).next().length === 1) {
-			next_id = $('#'+faq_id).next().attr('id');
-		    } else {
-			next_id = $('.faq-item').first().attr('id');    
-		    }
-		    
-		    $('button#prev-faq').attr('data-src', prev_id); 
-		    $('button#prev-faq').data('src', prev_id); 
-		    $('button#next-faq').attr('data-src', next_id); 
-			$('button#next-faq').data('src', next_id); 
 			
 			return false;
 			

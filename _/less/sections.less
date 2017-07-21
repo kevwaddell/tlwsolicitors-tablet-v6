@@ -551,6 +551,7 @@ section#contact-us-banner {
 	}
 	
 	.faq-nav {
+	.pad-top(2);
 		button {
 		.rounded(100%);
 		.border(@grayDk; 0.1);
@@ -558,20 +559,19 @@ section#contact-us-banner {
 		.bg-col(@wht);
 		.w(5);
 		.h(5);	
-			&:first-child {
-			.mag-bot(3);	
-			}
+		.mag-right(0.5);
 			
-			i {
-			.font-size(2.5);	
-			.block;
-			.text-center;
+			&.btn-active {
+			.bg-col-grayDk;
+			.txt-col-wht;	
+			pointer-events: none;
 			}
 			
 			&:active {
 			.bg-col-grayDk;
 			.txt-col-wht;
 			}
+			
 		}	
 	}
 }
