@@ -11,7 +11,7 @@ $subjects_args = array(
 $subjects = get_tags($subjects_args);	
 ?>
 
-<div class="col-xs-6">
+<div class="col-md-6">
 	
 	<?php if ($subjects) { ?>
 		<h3><?php echo get_the_title($news_page_ID); ?>: Tags</h3>

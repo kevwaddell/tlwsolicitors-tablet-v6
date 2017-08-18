@@ -10,7 +10,7 @@ $topics_args = array(
 ); 
 $topics = get_categories($topics_args);	
 ?>
-<div class="col-xs-6">
+<div class="col-md-6">
 		
 	<?php if ($topics) { ?>
 		<a href="<?php echo get_permalink($news_page_ID); ?>" class="header-link"><?php echo get_the_title($news_page_ID); ?>: Categories</a>

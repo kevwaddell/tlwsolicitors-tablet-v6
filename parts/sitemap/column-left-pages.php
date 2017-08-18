@@ -12,7 +12,7 @@ $services_args = array(
 $services = get_posts($services_args);
 ?>
 
-<div class="col-xs-6">
+<div class="col-md-6">
 		
 	<?php if ($services) { ?>
 	

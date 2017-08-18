@@ -41,7 +41,7 @@ $toolkits_pg_id = get_page_id('tlw-toolkits');
 //echo '<pre>';print_r($topics);echo '</pre>';
 
  ?>
-<div class="col-xs-6">
+<div class="col-md-6">
 	
 	<h3>TLW Media & Rescources</h3>
 
