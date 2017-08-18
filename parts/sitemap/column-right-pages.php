@@ -35,32 +35,28 @@ $legal_args = array(
 
 $legal_pages = get_posts($legal_args);
 
-$news_page_ID = get_option('page_for_posts');
-$news_page = get_page($news_page_ID);
-
-$topics_args = array(
-	'type'			=> 'post',
-	'hide_empty'	=> 0,
-	'hierarchical'       => 0,
-	'orderby'		=> 'meta_value',
-	'order'			=> 'desc'
-); 
-$topics = get_categories($topics_args);
-
-$subjects_args = array(
-	'type'			=> 'post',
-	'hide_empty'	=> 0,
-	'parent'		=> 0,
-	'orderby'		=> 'meta_value',
-	'order'			=> 'ASC'
-); 
-$subjects = get_tags($subjects_args);
-
+$videos_pg_id = get_page_id('videos');
+$downloads_pg_id = get_page_id('downloads');
+$toolkits_pg_id = get_page_id('tlw-toolkits');
 //echo '<pre>';print_r($topics);echo '</pre>';
 
  ?>
 <div class="col-xs-6">
+	
+	<h3>TLW Media & Rescources</h3>
 
+	<div class="list-block">
+
+		<ul class="list-unstyled">
+			
+			<li><a href="<?php echo get_permalink($toolkits_pg_id); ?>"><?php echo get_the_title($toolkits_pg_id); ?></a></li>
+			<li><a href="<?php echo get_permalink($videos_pg_id); ?>"><?php echo get_the_title($videos_pg_id); ?></a></li>
+			<li><a href="<?php echo get_permalink($downloads_pg_id); ?>"><?php echo get_the_title($downloads_pg_id); ?></a></li>
+			
+		</ul>
+		
+	</div>
+	
 	<a href="<?php echo get_permalink($company_page_id); ?>" class="header-link"><?php echo get_the_title($company_page_id); ?></a>
 	
 	<?php if ($company_pages) { ?>
@@ -108,30 +104,6 @@ $subjects = get_tags($subjects_args);
 			</ul>
 			
 		</div>
-	<?php } ?>
-	
-	<?php if ($topics) { ?>
-		<a href="<?php echo get_permalink($news_page->ID); ?>" class="header-link"><?php echo $news_page->post_title; ?>: Categories</a>
-		
-		<div class="list-block">
-			<ul class="list-unstyled">
-		<?php foreach ($topics as $topic) { ?>
-
-				<li><a href="<?php echo get_category_link($topic->term_id); ?>"><?php echo $topic->name; ?></a></li>
-			
-		<?php } ?>
-			</ul>
-		</div>
-			
-	<?php } ?>
-	
-	<?php if ($subjects) { ?>
-		<h3><?php echo $news_page->post_title; ?>: Tags</h3>
-		
-		<div class="list-block" style="text-transform: capitalize;">
-			<?php wp_tag_cloud('smallest=14&largest=14&unit=px&separator= | '); ?>
-		</div>
-			
 	<?php } ?>
 	
 </div>
