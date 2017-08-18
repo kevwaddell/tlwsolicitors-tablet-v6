@@ -34,30 +34,24 @@ Template Name: Sitemap page
 <section id="site-map-lists">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-xs-10 col-xs-offset-1">
+			<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
 				<h2 class="section-header">Pages</h2>
-				<div class="row">
 				<!-- Left -->
 				<?php get_template_part( 'parts/sitemap/column', 'left-pages' ); ?>	
 				
 				<!-- Right -->
 				<?php get_template_part( 'parts/sitemap/column', 'right-pages' ); ?>
-				
-				</div>
 			</div>
 		</div>
 		<div class="rule"></div>
 		<div class="row">
-			<div class="col-xs-10 col-xs-offset-1">
+			<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
 				<h2 class="section-header">Articles</h2>
-				<div class="row">
 				<!-- Left -->
 				<?php get_template_part( 'parts/sitemap/column', 'left-articles' ); ?>	
 				
 				<!-- Right -->
 				<?php get_template_part( 'parts/sitemap/column', 'right-articles' ); ?>
-				
-				</div>
 			</div>
 		</div>
 	</div>

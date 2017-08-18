@@ -11,15 +11,12 @@ $subjects_args = array(
 $subjects = get_tags($subjects_args);	
 ?>
 
-<div class="col-md-6">
+<?php if ($subjects) { ?>
+	<h3><?php echo get_the_title($news_page_ID); ?>: Tags</h3>
 	
-	<?php if ($subjects) { ?>
-		<h3><?php echo get_the_title($news_page_ID); ?>: Tags</h3>
+	<div class="list-block">
+		<?php wp_tag_cloud('smallest=16&largest=16&unit=px&separator= | '); ?>
+	</div>
 		
-		<div class="list-block">
-			<?php wp_tag_cloud('smallest=16&largest=16&unit=px&separator= | '); ?>
-		</div>
-			
-	<?php } ?>
+<?php } ?>
 	
-</div>

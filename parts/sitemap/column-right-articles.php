@@ -10,21 +10,19 @@ $topics_args = array(
 ); 
 $topics = get_categories($topics_args);	
 ?>
-<div class="col-md-6">
 		
-	<?php if ($topics) { ?>
-		<a href="<?php echo get_permalink($news_page_ID); ?>" class="header-link"><?php echo get_the_title($news_page_ID); ?>: Categories</a>
-		
-		<div class="list-block">
-			<ul class="list-unstyled">
-		<?php foreach ($topics as $topic) { ?>
-
-				<li><a href="<?php echo get_category_link($topic->term_id); ?>"><?php echo $topic->name; ?></a></li>
-			
-		<?php } ?>
-			</ul>
-		</div>
-			
-	<?php } ?>
+<?php if ($topics) { ?>
+	<a href="<?php echo get_permalink($news_page_ID); ?>" class="header-link"><?php echo get_the_title($news_page_ID); ?>: Categories</a>
 	
-</div>
+	<div class="list-block">
+		<ul class="list-unstyled cols-2">
+	<?php foreach ($topics as $topic) { ?>
+
+			<li><a href="<?php echo get_category_link($topic->term_id); ?>"><?php echo $topic->name; ?></a></li>
+		
+	<?php } ?>
+		</ul>
+	</div>
+		
+<?php } ?>
+	

@@ -79,7 +79,11 @@ text-align: center;
 	.mag-bot(2);
 		
 		ul {
-		.mag-bot(0);	
+		.mag-bot(0);
+		text-align: center;
+			&.cols-2 {
+			.columns(50%, 2, 30px, @trans, none, 0px);	
+			}	
 		}
 	
 		a {
