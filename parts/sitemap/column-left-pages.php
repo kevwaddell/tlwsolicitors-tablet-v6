@@ -19,12 +19,6 @@ $services = get_posts($services_args);
 	<?php foreach ($services as $service) { ?>
 	
 	<?php 
-	$icon = get_field('page_icon', $service->ID);
-	
-	if (!empty($icon)) {
-	$icon_tag = '<i class="icon fa '.$icon.'"></i>';	
-	}
-	
 	$service_args = array(
 	'posts_per_page' => -1,
 	'post_type'		=> 'page',
@@ -35,10 +29,10 @@ $services = get_posts($services_args);
 	
 	$service_children = get_posts($service_args);
 	 ?>
-	
+	 	<a href="<?php echo get_permalink($service->ID); ?>" class="header-link"><?php echo $service->post_title; ?></a>
+		
 		<div class="list-block">
-			<a href="<?php echo get_permalink($service->ID); ?>" class="header-link"><?php echo $service->post_title; ?></a>
-			
+				
 		<?php if ($service_children) { ?>
 			
 			<ul class="list-unstyled">
