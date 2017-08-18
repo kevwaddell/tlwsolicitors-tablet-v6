@@ -46,6 +46,7 @@ Template Name: Sitemap page
 				</div>
 			</div>
 		</div>
+		<div class="rule"></div>
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
 				<h2 class="section-header">Articles</h2>
