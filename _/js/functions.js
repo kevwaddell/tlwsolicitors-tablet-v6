@@ -204,7 +204,13 @@
 	$('body').on(event_type,'button#continue-read-btn', function(){
 		
 		var inner_h = $('#content-extra-inner').outerHeight();
-			
+		var container = $("#main-content");
+		var scrollTo = $("#content-extra");
+		
+		container.animate({
+		scrollTop: scrollTo.offset().top - container.offset().top + container.scrollTop() - 85
+		});
+		    	
 		$('button#continue-read-btn').addClass('hidden');
 		
 		$('#content-extra').animate({height: inner_h+"px"}, 500, function(){
@@ -218,10 +224,16 @@
 	$('body').on(event_type,'button#close-content-extra-btn', function(){
 		
 		var parent_pos = $('#content-extra-inner').parent().position().top;
+		var container = $("#main-content");
+		var scrollTo = $(".content-section");
+		
+		container.animate({
+		scrollTop: scrollTo.offset().top - container.offset().top + container.scrollTop() - 105
+		});
 		
 		$('button#continue-read-btn').removeClass('hidden');
 		
-		$('main').animate({scrollTop: parent_pos}, 500);
+		//$('main').animate({scrollTop: parent_pos}, 500);
 			
 		$('#content-extra').animate({height: "0px"}, 500, function(){
 			$('#content-extra').removeClass('open').addClass('closed').removeAttr('style');	
