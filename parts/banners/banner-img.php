@@ -16,7 +16,7 @@ $page_icon = get_field('page_icon', $post->post_parent);
 			<div class="col-md-10 col-md-offset-1">
 				<div class="img" style="background-image: url(<?php add_banner_feat_img($img_post);?>)">
 					<header class ="banner-title font-slab-serif caps">
-						<?php echo get_the_title($post->post_parent); ?>
+						<?php echo the_title(); ?>
 					</header>
 				</div>
 				<i class="fa <?php echo $page_icon; ?>"></i>
