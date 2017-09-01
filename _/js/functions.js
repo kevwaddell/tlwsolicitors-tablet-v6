@@ -11,15 +11,19 @@
 	        hash = hashes[i].split('=');	        
 	        
 	         if (hash[0] === "gclid" && $('#input_23_12').length === 1) {
-		      $('input#input_23_12').val(hash[1]);  
+			      $('input#input_23_12').val(hash[1]);  
 	        }
 	        
-	         if (hash[0] === "gclid" && $('#input_22_27').length === 1) {
+	        if (hash[0] === "gclid" && $('#input_22_27').length === 1) {
 		      $('input#input_22_27').val(hash[1]);  
-	        }	 
-	        
+	        }	   
+	       
 	        if (hash[0] === "gclid" && $('#input_26_24').length === 1) {
 		      $('input#input_26_24').val(hash[1]);  
+	        }	
+	        
+	         if (hash[0] === "gclid" && $('#input_25_24').length === 1) {
+		      $('input#input_25_24').val(hash[1]);  
 	        }	  
 	        
 	        if (hash[0] === "gclid" ) { 
