@@ -36,9 +36,9 @@
         var addStylesNode = document.getElementById("deferred-styles");
         var replacement = document.createElement("div");
         var criticalCSS = document.getElementById("critical-css");
-        replacement.innerHTML = addStylesNode.textContent;
-		document.body.appendChild(replacement);
-        addStylesNode.parentElement.removeChild(addStylesNode);
+        //replacement.innerHTML = addStylesNode.textContent;
+		//document.body.appendChild(replacement);
+        //addStylesNode.parentElement.removeChild(addStylesNode);
        document.body.classList.remove("atfc-tablet-css");
        criticalCSS.parentNode.removeChild(criticalCSS);
       };
