@@ -175,6 +175,26 @@
 		"oAP": "\/_\/css\/fonts\/OpenSans-Light-webfont.woff",
 		"oF": 0
 		},
+	"\/_\/css\/gf-merged-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/_\/css\/gf-merged-min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/_\/css\/gf-merged.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/_\/css\/gf-merged-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"\/_\/css\/img\/bg-icon-logo-mini.png": {
 		"ft": 32768,
 		"iS": 2407,
@@ -1121,12 +1141,6 @@
 		"oF": 0,
 		"oS": 3
 		},
-	"\/footer-landing.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/footer-landing.php",
-		"oF": 0
-		},
 	"\/footer.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -1143,12 +1157,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/functions.php",
-		"oF": 0
-		},
-	"\/header-landing.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/header-landing.php",
 		"oF": 0
 		},
 	"\/header.php": {
