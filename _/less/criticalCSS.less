@@ -165,6 +165,64 @@ background-color: white;
 	display: none;	
 	}
 	
+	header[role="banner"] {
+//.bg-col(white);	
+.trans-bg(@wht; 0.9);
+.abs;
+.top(0);
+.left(0);
+.right(0);
+.h(8);
+z-index: 2;
+.over-hide;
+
+	a.logo {
+	.block;
+	.h(7.5);
+	.max-w(22);
+	.bg-img("tlw-logo-wide.svg");
+	.bg-repeat(no-repeat);
+	background-position: left center;
+	.bg-size(contain);
+
+		&:active {
+		.opacity(0.5);	
+		}
+		
+	}
+	
+	.header-action-btns {
+	.block !important;
+	.pad-top(1.75);
+	.h(7.5);
+		.btn {
+		.border(@grayDk; 0.1);
+		.no-rounded;
+		.txt-col-grayDk;
+		.bg-col(@trans); 
+		.w(4);
+		.h(4);
+		.pad-all(0);
+		.mag-left(1);
+			&:active {
+			.bg-col-grayDk;
+			.col(white);
+			}	
+		}
+
+	}
+	
+	.tel-num {
+	.line-h(7.5);	
+		a {
+		.txt-col-red;
+			&:active {
+			.txt-col-red-dk;
+			}	
+		}
+	}
+}
+	
 	#continue-read-btn {
 	border-radius: 0px;
 	border: 1px solid @grayLt;
@@ -245,31 +303,23 @@ background-color: white;
 		}
 	}
 	
-	#top-banner {
-	margin-bottom: 36px;
+	section#top-banner {
+		.mag-bot(3.6);	
+	
 		&.hp-banner {
-		margin-bottom: 0px;	
+		.mag-bot(0);	
 		}
 		
 		.banner-links-imgs {
-		position: relative;
-		margin-bottom: 0px;
-		margin-top: 0px;
-		padding-left: 0;
-		list-style: none;
-		text-align: center;
-			&:after {
-			content: " ";
-			display: table;
-			}
-			
+		.rel;	
+		.mag-bot(0);
 			li {
 			width: calc(~"100% / 3");
-			height: 200px;
-			margin-bottom: 4px;
-			padding-left: 2px;
-			padding-right: 2px;
-			float: left;
+			.h(20);
+			.mag-bot(0.4);
+			.pad-left(0.2);
+			.pad-right(0.2);
+			.fleft;
 			}
 			
 			&.links-total-4 li {
@@ -283,19 +333,62 @@ background-color: white;
 			}
 			
 			span.img {
-			display: none;
+			.abs;
+			.top(0);
+			.left(0);
+			.right(0);
+			.bottom(0);
+			.bg-size;
+			.bg-repeat(no-repeat);
+			background-position: center center;	
+			.transition;	
 			}
 			
 			span.title {
-			display: none;
+			.abs;
+			.left(0);
+			.right(0);
+			.bottom(0);	
+			.trans-bg(@wht; 0.8);
+			.line-h(5);
+			.caps;
+			.pad(0;1;0;1);
+			.txt-col-grayDk;
+			.transition;
+				span {
+				.in-block;
+				vertical-align: middle;
+				.line-h(1.6);	
+				}	
 			}
-			
+	
 			a {
-			display: block;
+			.block;
 			height: 100%;
-			background-color: @grayLt;
+			.font-slab-serif;
+			.no-text-dec;
+			.rel;
+			.font-size(1.6);
+			.over-hide;
+				&:active {
+					span.img {
+					.top(-2);
+					.left(-2);
+					.right(-2);
+					.bottom(-2);
+					-webkit-filter: blur(5px);
+					-moz-filter: blur(5px);
+					-o-filter: blur(5px);
+					-ms-filter: blur(5px);
+					filter: blur(5px);	
+					}
+					span.title {
+					.trans-bg(@red; 0.8);
+					.txt-col-wht;
+					}
+				}
 			}		
-
+							
 		}
 	}
 	
@@ -326,11 +419,11 @@ background-color: white;
 	}
 	
 	.hp-sidebar {
-	padding-top: 10px;
+	.pad-top(0.5);
 		.feefo-panel {
-		background-color: @grayLt;
 		margin-bottom: 50px;	
 		min-height: 186px;
+		.border(@grayDk; 0.1);
 			i, h3, div {
 				display: none;
 			}
@@ -748,8 +841,8 @@ background-color: white;
 	min-height: inherit;
 		.gform_wrapper {
 		margin: 0px;
-		background-color: @grayLt;	
 		min-height: 252px;
+		.border(@grayDk; 0.1);
 		}
 		
 		form {
@@ -758,43 +851,35 @@ background-color: white;
 	}
 	
 	.col-strip {
-	height: 10px;
-	z-index: 2;
-	position: relative;
+	.h(0.5);
+	.rel;
 		.col-block {
-		height: 10px;
+		.h(0.5);	
 		width: 20%;
-		float: left;
-		border-right: 2px solid #fff;
-		background-color: @grayLt;	
-			&:last-child {
-			border: none;	
-			}
-		}	
-	}
-			
-	header[role="banner"] {
-	.trans-bg(@wht; 0.9);
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	right: 0px;
-	height: 80px;
-	z-index: 2;
-	overflow: hidden;
-		
-		a.logo {
-		display: block;
-		height: 75px;
-		max-width: 220px;
-		background-image: url('/wp-content/themes/tlwsolicitors-tablet-v6/_/css/img/tlw-logo-wide.svg');			
-		background-repeat: no-repeat;
-		background-position: center center;
-		background-size: contain;
-		-webkit-filter: grayscale(70%);
-		filter: grayscale(70%);
+		.fleft;
+		.border-right(@wht; 0.4);
 		}
 		
+		.col-purple {
+		.bg-col(@purple);	
+		}
+		
+		.col-green {
+		.bg-col(@green);	
+		}
+		
+		.col-pink {
+		.bg-col(@pink);	
+		}
+		
+		.col-orange {
+		.bg-col(@orange);	
+		}
+		
+		.col-blue {
+		.bg-col(@blue);	
+		.no-border;
+		}
 	}
 	
 	#footer-info {
