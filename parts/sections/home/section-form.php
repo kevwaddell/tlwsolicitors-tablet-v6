@@ -10,10 +10,7 @@ $form = get_field('hp_form', 'option');
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
-			<?php 
-			gravity_form($form->id, false, true, false, '', true);
-			gravity_form_enqueue_scripts( $form->id );
-			?>
+			<?php gravity_form($form->id, false, true, false, '', false);?>
 			</div>
 		</div>
 	</div>
