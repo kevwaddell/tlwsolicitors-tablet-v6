@@ -36,6 +36,8 @@
 		<div id="feefologohere"></div>			
 		<?php } ?>
 		
+		<?php get_template_part( 'parts/global/site', 'loader' ); ?>
+		
 		<?php wp_footer(); ?>
 
 	</body>

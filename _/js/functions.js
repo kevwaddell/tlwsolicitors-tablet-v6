@@ -384,8 +384,12 @@
 	$(window).bind('load',function(){
 		
 		setTimeout(function(){
-        	$('body').removeClass('loading');
         	
+        	$('#loader').fadeOut('300', function(){	
+        		$('body').removeClass('loading atfc-tablet-css');
+				$('document').find("#critical-css").remove();
+			});
+					
         	if ($('#wide-map-canvas').length === 1) {
 			initMap();	
 			}

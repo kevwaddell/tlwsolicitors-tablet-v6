@@ -648,6 +648,23 @@
 		"sM": 0,
 		"sU": 0
 		},
+	"\/_\/less\/bootstrap-basic.less": {
+		"aP": 0,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/_\/css\/bootstrap-basic.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
+		},
 	"\/_\/less\/bootstrap-select.less": {
 		"aP": 0,
 		"bl": 0,
@@ -744,7 +761,7 @@
 		"oA": 0,
 		"oAP": "\/_\/css\/criticalCSS.css",
 		"oF": 2,
-		"oS": 0,
+		"oS": 1,
 		"rU": 0,
 		"sI": 0,
 		"sM": 0,
@@ -1433,6 +1450,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/parts\/global\/popups\/xmas-popup.php",
+		"oF": 0
+		},
+	"\/parts\/global\/site-loader.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/parts\/global\/site-loader.php",
 		"oF": 0
 		},
 	"\/parts\/headers\/header-global.php": {
