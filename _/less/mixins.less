@@ -406,20 +406,15 @@ border-radius: 0px;
 	}
 
 	&:before {
+	left: 0px;
 	bottom: -1px;
-	background-image: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(@gray));
-	background-image: -webkit-linear-gradient(left, transparent, @gray);
-	background-image: -moz-linear-gradient(left, transparent, @gray);
-	background-image: -o-linear-gradient(left, transparent, @gray);
+	background-image: linear-gradient(to left, @gray, transparent);
 	}
 
 	&:after {
 	right: 0px;
 	bottom: -1px;
-	background-image: -webkit-gradient(linear, 0 0, 100% 0, from(@gray), to(transparent));
-	background-image: -webkit-linear-gradient(left, @gray, transparent);
-	background-image: -moz-linear-gradient(left, @gray, transparent);
-	background-image: -o-linear-gradient(left, @gray, transparent);
+	background-image: linear-gradient(to left, transparent, @gray);
 	}
 
 }
