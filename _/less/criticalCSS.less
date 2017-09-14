@@ -395,25 +395,31 @@ z-index: 2;
 	section#video-banner {
 	
 		.video-wrapper {
-		border: 1px solid @grayLt;
-		background-color: @grayLt;
-		height: 414px;
-		overflow: hidden;
+		.border(@grayDk; 0.1);	
+		.rel;
+		.h(40);
+		.over-hide;
 			@media screen and (orientation: landscape) {
-			height: 462px;
+			.h(43.5);	
 			}
 		}
 		
 		video#service-video { 
-		display: none;
+		.abs;
+		.top(0);
+		.left(0);
+	    width: 100%;
+		height: auto;
 		}
 		
 		.banner-title {
-		background-color: @grayLt;
-		height: 100px;
-		margin-top: 35px;
+		.bg-col-red;
+		.mag-top(2);
+		.font-size(2);
+		.line-h(7);
+		.txt-col-wht;
 			span {
-			display: none;	
+			.line-h(2);	
 			}
 		}
 	}
