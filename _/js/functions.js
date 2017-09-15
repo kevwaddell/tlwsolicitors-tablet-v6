@@ -34,6 +34,19 @@
 	}
 	
 	getUrlVars();
+	
+	function initMap(lat, lgn) {
+		
+		var uluru = {lat: lat, lng: lgn};
+		var map = new google.maps.Map(document.getElementById('map-canvas'), {
+		          zoom: 14,
+		          center: uluru
+		        });
+		var marker = new google.maps.Marker({
+		          position: uluru,
+		          map: map
+		        });
+	};
 
 	$(document).ready(function (){
 	
@@ -383,16 +396,20 @@
 	
 	$(window).bind('load',function(){
 		
+		if ($('#map-canvas').length === 1) {
+			$.getScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyCWfwM9bo9zsSfrpXwMZ0bDZbhvgiP1tKo&sensor=false", function(){
+			var lat = $('#map-canvas').data('lat');
+			var lng = $('#map-canvas').data('lng');
+			initMap(lat, lng);		
+			});
+		}
+		
 		setTimeout(function(){
         	
         	$('#loader').fadeOut('300', function(){	
         		$('body').removeClass('loading atfc-tablet-css');
 				$('head').find("#critical-css").remove();
 			});
-					
-        	if ($('#wide-map-canvas').length === 1) {
-			initMap();	
-			}
 			
 		}, 2000);
 		
