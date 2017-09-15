@@ -116,26 +116,6 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/_\/js\/bootstrap-min.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "\/_\/js\/min\/bootstrap-min-min.js",
-		"oF": 1,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/_\/js\/bootstrap.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "\/_\/js\/min\/bootstrap-min.js",
-		"oF": 1,
-		"sC": 1,
-		"tS": 0
-		},
 	"\/_\/js\/functions-min.js": {
 		"ft": 64,
 		"ma": 0,
@@ -154,46 +134,6 @@
 		"oAP": "\/_\/js\/functions-min.js",
 		"oF": 2,
 		"sC": 0,
-		"tS": 0
-		},
-	"\/_\/js\/loadCSS-min.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/_\/js\/min\/loadCSS-min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/_\/js\/loadCSS.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/_\/js\/loadCSS-min.js",
-		"oF": 2,
-		"sC": 0,
-		"tS": 0
-		},
-	"\/_\/js\/map.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "\/_\/js\/min\/map-min.js",
-		"oF": 1,
-		"sC": 0,
-		"tS": 0
-		},
-	"\/_\/js\/modernizr-min.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "\/_\/js\/min\/modernizr-min-min.js",
-		"oF": 1,
-		"sC": 1,
 		"tS": 0
 		},
 	"\/_\/less\/animate.less": {

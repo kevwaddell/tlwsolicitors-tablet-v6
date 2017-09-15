@@ -12,7 +12,7 @@ $map_active = $section['map_active'];
 	if (empty($section_title)) {
 	$section_title = "Location map";
 	}
-	$map_marker = get_stylesheet_directory_uri()."/_/img/map-marker.png";
+	$map_marker = get_template_directory_uri()."/_/img/map-marker.png";
 ?>
 <a name="find-us" id="find-us" class="section-target"></a>
 <div class="rule"></div>
