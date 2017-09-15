@@ -175,50 +175,6 @@
 		"oAP": "\/_\/css\/fonts\/OpenSans-Light-webfont.woff",
 		"oF": 0
 		},
-	"\/_\/css\/img\/bg-icon-logo-mini.png": {
-		"ft": 32768,
-		"iS": 2407,
-		"oA": 0,
-		"oAP": "\/_\/css\/img\/bg-icon-logo-mini.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/_\/css\/img\/bg-icon-logo-wht.png": {
-		"ft": 32768,
-		"iS": 42391,
-		"oA": 0,
-		"oAP": "\/_\/css\/img\/bg-icon-logo-wht.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/_\/css\/img\/bg-icon-logo.png": {
-		"ft": 32768,
-		"iS": 14229,
-		"oA": 0,
-		"oAP": "\/_\/css\/img\/bg-icon-logo.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/_\/css\/img\/drawn-arrow.png": {
-		"ft": 32768,
-		"iS": 6577,
-		"oA": 0,
-		"oAP": "\/_\/css\/img\/drawn-arrow.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
 	"\/_\/css\/img\/feefo-stars.png": {
 		"ft": 32768,
 		"iS": 3881,
@@ -285,28 +241,6 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/_\/css\/img\/law-awards-text-right-2016.png": {
-		"ft": 32768,
-		"iS": 3940,
-		"oA": 0,
-		"oAP": "\/_\/css\/img\/law-awards-text-right-2016.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/_\/css\/img\/northern-Law-Awards-logo.png": {
-		"ft": 32768,
-		"iS": 7879,
-		"oA": 0,
-		"oAP": "\/_\/css\/img\/northern-Law-Awards-logo.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
 	"\/_\/css\/img\/snowflake-1.png": {
 		"ft": 32768,
 		"iS": 5311,
@@ -340,43 +274,11 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/_\/css\/img\/spinner.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/_\/css\/img\/spinner.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/_\/css\/img\/striped-img-overlay.png": {
-		"ft": 32768,
-		"iS": 197,
-		"oA": 0,
-		"oAP": "\/_\/css\/img\/striped-img-overlay.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
 	"\/_\/css\/img\/thin-stripe-wht.png": {
 		"ft": 32768,
 		"iS": 87,
 		"oA": 0,
 		"oAP": "\/_\/css\/img\/thin-stripe-wht.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/_\/css\/img\/tlw-banner-logo-lrg.png": {
-		"ft": 32768,
-		"iS": 9504,
-		"oA": 0,
-		"oAP": "\/_\/css\/img\/tlw-banner-logo-lrg.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -399,27 +301,6 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "\/_\/css\/img\/tlw-logo-wide.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/_\/css\/img\/tlw-logo.png": {
-		"ft": 32768,
-		"iS": 3654,
-		"oA": 0,
-		"oAP": "\/_\/css\/img\/tlw-logo.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/_\/css\/img\/tlw-logo.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/_\/css\/img\/tlw-logo.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -484,17 +365,6 @@
 		"oF": 0,
 		"oS": 3
 		},
-	"\/_\/img\/404-page-not-found.png": {
-		"ft": 32768,
-		"iS": 173252,
-		"oA": 0,
-		"oAP": "\/_\/img\/404-page-not-found.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
 	"\/_\/img\/ajax-loader.gif": {
 		"ft": 4194304,
 		"iS": 673,
@@ -514,17 +384,6 @@
 		"iS": 4316,
 		"oA": 0,
 		"oAP": "\/_\/img\/map-marker.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/_\/img\/thank-you-message-sent.png": {
-		"ft": 32768,
-		"iS": 175326,
-		"oA": 0,
-		"oAP": "\/_\/img\/thank-you-message-sent.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
