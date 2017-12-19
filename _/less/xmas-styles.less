@@ -1,37 +1,28 @@
-@import url(https://fonts.googleapis.com/css?family=Lobster);
-
 #xmas-popup-btn-wrap {
-.rel;
+.abs;
 width: 100%;
-//.h(7);
+.h(7);
+.left(0);
+.bottom(0);
 text-align: center;
 //.animated;
-.transition(0.3s, ease-in-out);
-	.wrap-inner {
-	.h(7);
-	.border-bot(@wht; 0.4);
-	.bg-col(darken(@green, 20%));		
-	}
+transition: 0.3s;
+.bg-col(darken(@green, 20%));	
 	
 	p {
-	.line-h(6.6);	
+	.line-h(7);	
 	.col(white);
 	.bold;
 	.font-size(1.6);
 	}
 
 	&.pop-up-inactive {
-	.h(7);
-	//.bottom(0);	
-	//animation-delay: 2s;
-	//.animate-delay(2s);
-	.slideInUp;
+	transform: translateY(0%);
 	}
 	
 	&.pop-up-active {
-	.h(0);
+	transform: translateY(100%);
 	//.bottom(-7);
-	.slideInDown;	
 	}
 	
 	.btn {
@@ -219,17 +210,8 @@ z-index: 1000;
 .bg-repeat(no-repeat);
 .bg-size(contain);
 background-position: center center;
--webkit-animation-timing-function: linear;
--moz-animation-timing-function: linear;
--ms-animation-timing-function: linear;
 animation-timing-function: linear;
--webkit-animation-fill-mode: forwards;
--moz-animation-fill-mode: forwards;
--ms-animation-fill-mode: forwards;
 animation-fill-mode: forwards;
--webkit-animation-iteration-count: infinite;
--moz-animation-iteration-count: infinite;
--ms-animation-iteration-count: infinite;
 animation-iteration-count: infinite;
 z-index: 1;
 left: 50%;
@@ -364,10 +346,4 @@ left: 50%;
   to {
     transform: rotate(-360deg);
   }
-}
-
-body.logged-in #xmas-popup-btn-wrap .holly {
-	&.left {
-	.left(6);	
-	}
 }

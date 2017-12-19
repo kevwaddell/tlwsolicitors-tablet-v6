@@ -11,12 +11,11 @@ $main_email = get_field('main_email', 'option');
 ?>		
 
 <?php if ($today < $turn_off_date) { ?>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+</style>
 <div id="xmas-popup-btn-wrap" class="pop-up-inactive">
-	<div  class="wrap-inner">
-		<div class="container-fluid">
-			<p><?php echo bloginfo('name'); ?> opening hours for the Christmas period <button id="xmas-popup-btn-open" class="btn btn-default">View times <i class="fa fa-arrow-circle-up"></i></button></p>
-		</div>
-	</div>
+	<p><?php echo bloginfo('name'); ?> opening hours for the Christmas period <button id="xmas-popup-btn-open" class="btn btn-default">View times <i class="fa fa-arrow-circle-up"></i></button></p>
 	<div class="holly left"></div>
 	<div class="holly right"></div>
 </div>
