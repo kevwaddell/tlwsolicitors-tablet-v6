@@ -1,6 +1,6 @@
 <?php
 get_template_part( 'parts/headers/header', 'global' );
-$body_classes = array('atfc-tablet-css','nav-closed', 'loading');
+$body_classes = array('atfc-tablet-css','nav-closed');
 ?>	
 
 <body <?php body_class($body_classes); ?>>

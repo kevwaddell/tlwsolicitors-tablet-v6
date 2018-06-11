@@ -404,7 +404,11 @@
 			});
 		}
 		
-		setTimeout(function(){
+		$('body').removeClass('atfc-tablet-css');
+		$('head').find("#critical-css").remove();
+		
+		/*
+setTimeout(function(){
         	
         	$('#loader').fadeOut('300', function(){	
         		$('body').removeClass('loading atfc-tablet-css');
@@ -412,6 +416,7 @@
 			});
 			
 		}, 2000);
+*/
 		
 		$('.has-bg-img').each(function(index, Element) {
 				var src = $(Element).data('src');
