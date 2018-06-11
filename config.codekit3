@@ -950,6 +950,13 @@
 		"oAP": "\/parts\/footers\/footer-user.php",
 		"oF": 0
 		},
+	"\/parts\/global\/awards-banner.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/parts\/global\/awards-banner.php",
+		"oF": 0
+		},
 	"\/parts\/global\/color-strip.php": {
 		"cB": 0,
 		"ft": 8192,
