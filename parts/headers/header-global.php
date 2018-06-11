@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js" prefix="og: http://ogp.me/ns#">
 <head id="www-tlwsolicitors-co-uk" data-template-set="tlw-solicitors-theme">
-	
+<script type="text/javascript">
+    var elm=document.getElementsByTagName("html")[0];
+    elm.style.display="none";
+    document.addEventListener("DOMContentLoaded",function(event) { elm.style.display="block"; });
+</script>	
 	<?php if ($_SERVER['SERVER_NAME']=='www.tlwsolicitors.co.uk') { ?>
 	<!-- Trinity Mirror script -->
 	<script>
