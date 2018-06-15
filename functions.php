@@ -21,4 +21,10 @@ if (!is_admin()) {
 	add_action( 'wp_enqueue_scripts', 'tlw_tablet_scripts' );
 	
 }
+
+function tab_my_login() {
+wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/_/css/user-styles.css' );  
+}
+
+add_action( 'login_enqueue_scripts', 'tab_my_login');
 ?>
