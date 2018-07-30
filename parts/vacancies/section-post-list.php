@@ -19,7 +19,7 @@ $args = array(
 	
 $wp_query = new WP_Query( $args );
 
-$section_title = "Positions available";	
+$section_title = "Join our team";	
 $post_count = $wp_query->found_posts;
 ?>
 <div class="rule"></div>
