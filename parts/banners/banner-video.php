@@ -5,7 +5,7 @@ $banner_title_active = get_field('banner_title_active');
 <?php //echo '<pre>';print_r($banner_quick_links);echo '</pre>'; ?>
 <section id="video-banner" class="top-banner-video">
 	
-	<div class="container">
+	<div class="container-fluid">
 
 		<div class="row">			
 			<div class="col-md-10 col-md-offset-1">
